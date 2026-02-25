@@ -7,7 +7,7 @@
 
 ## 🧠 CTF Writeups
 * [Overview](writeups/README.md)
-
+* [HTB](writeups/linux/easy/drive.md)
 ### 🧪 Binary Exploitation
 * [ret2win – ExampleCTF](writeups/pwn/ret2win.md)
 
