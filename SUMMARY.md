@@ -9,13 +9,17 @@
 * [Overview](writeups/README.md)
 
 * HTB
-  * 🧪 Binary Exploitation
+  * 🧪 Machines
     * [Drive – Linux Easy](writeups/linux/easy/drive.md)
     * [ret2win – ExampleCTF](writeups/pwn/ret2win.md)
-  * 🔐 Cryptography
+  * 🔐 Challenges
     * [XOR Madness – CryptoCTF](writeups/crypto/xor-madness.md)
-  * 🌐 Web
+  * 🌐 Sherlocks
     * [JWT Abuse – WebCTF](writeups/web/jwt-abuse.md)
+* THM
+  * 🧪 Machines
+* CTF's
+  * Challenge Solves
 
 ## 🛠 Resources
 * [Tools I Use](resources/tools.md)
