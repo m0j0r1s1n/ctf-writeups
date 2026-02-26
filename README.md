@@ -1,3 +1,7 @@
+![Deploy](https://github.com/m0j0r1s1n/ctf-writeups/actions/workflows/deploy.yml/badge.svg)
+
+# 🏴‍☠️ CTF Writeups
+
 # 🏴‍☠️ My CTF Writeups
 
 Welcome!  
