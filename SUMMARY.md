@@ -12,9 +12,9 @@
   * 🖳 Machines
     * [Drive – Linux Easy](writeups/linux/easy/drive.md)
     * [Analytics - Linux Easy](writeups/linux/easy/analytics/README.md)
-    * [ret2win – ExampleCTF](writeups/pwn/ret2win.md)
   * 🔐 Challenges
-    * [XOR Madness – CryptoCTF](writeups/crypto/xor-madness.md)
+    * [Hackaboo - Hexcoding64](writeups/crypto/hexcoding64.md)
+    * [Hackaboo - Spooky Phishing](writeups/forensics/spookyfishing.md)
   * 🕵🏻 Sherlocks
     * [JWT Abuse – WebCTF](writeups/web/jwt-abuse.md)
 * THM

