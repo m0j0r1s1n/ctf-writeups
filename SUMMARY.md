@@ -24,3 +24,4 @@
 
 ## 🛠 Resources
 * [Tools I Use](resources/tools.md)
+  * [Red Team Cheat Sheet](resources/redteamcheatsheet.md)
