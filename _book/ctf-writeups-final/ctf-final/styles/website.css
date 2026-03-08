@@ -1,0 +1,11 @@
+.book-summary {
+  background: #121212;
+}
+
+.book-summary a {
+  color: #38bdf8;
+}
+
+.book-body {
+  font-family: "JetBrains Mono", monospace;
+}
