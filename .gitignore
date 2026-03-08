@@ -1,0 +1,8 @@
+_book/
+node_modules/
+.DS_Store
+Thumbs.db
+.vscode/
+*.swp
+ctf-writeups.zip
+ctf-writeups-v2.zip

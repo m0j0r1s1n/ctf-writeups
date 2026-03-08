@@ -61,6 +61,8 @@
     <link rel="next" href="redteamcheatsheet.html" />
     
     
+    <link rel="prev" href="../writeups/ctf/" />
+    
 
     </head>
     <body>
@@ -187,7 +189,7 @@
                 <a href="../writeups/linux/easy/analytics/">
             
                     
-                    Analytics - Linux Easy
+                    Analytics – Linux Easy
             
                 </a>
             
@@ -205,7 +207,7 @@
                 <span>
             
                     
-                    🔐 Challenges
+                    💥 Pwn
             
                 </span>
             
@@ -214,25 +216,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.2.2.1" data-path="../writeups/crypto/hexcoding64.html">
+        <li class="chapter " data-level="3.2.2.1" data-path="../writeups/pwn/ret2win.html">
             
-                <a href="../writeups/crypto/hexcoding64.html">
-            
-                    
-                    Hackaboo - Hexcoding64
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="3.2.2.2" data-path="../writeups/forensics/spookyfishing.html">
-            
-                <a href="../writeups/forensics/spookyfishing.html">
+                <a href="../writeups/pwn/ret2win.html">
             
                     
-                    Hackaboo - Spooky Phishing
+                    ret2win – Binary Exploitation
             
                 </a>
             
@@ -250,6 +239,64 @@
                 <span>
             
                     
+                    🔐 Challenges
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.2.3.1" data-path="../writeups/crypto/hexcoding64.html">
+            
+                <a href="../writeups/crypto/hexcoding64.html">
+            
+                    
+                    Hackaboo – Hexcoding64
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.2" data-path="../writeups/forensics/spookyfishing.html">
+            
+                <a href="../writeups/forensics/spookyfishing.html">
+            
+                    
+                    Hackaboo – Spooky Phishing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.3.3" data-path="../writeups/crypto/xor-madness.html">
+            
+                <a href="../writeups/crypto/xor-madness.html">
+            
+                    
+                    XOR Madness – CryptoCTF
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2.4" >
+            
+                <span>
+            
+                    
                     🕵🏻 Sherlocks
             
                 </span>
@@ -259,7 +306,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.2.3.1" data-path="../writeups/web/jwt-abuse.html">
+        <li class="chapter " data-level="3.2.4.1" data-path="../writeups/web/jwt-abuse.html">
             
                 <a href="../writeups/web/jwt-abuse.html">
             
@@ -307,6 +354,25 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.3.1.1" data-path="../writeups/thm/">
+            
+                <a href="../writeups/thm/">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
 
@@ -328,14 +394,14 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.4.1" >
+        <li class="chapter " data-level="3.4.1" data-path="../writeups/ctf/">
             
-                <span>
+                <a href="../writeups/ctf/">
             
                     
                     Challenge Solves
             
-                </span>
+                </a>
             
 
             
@@ -364,10 +430,9 @@
             
 
             
-            <ul class="articles">
-                
+        </li>
     
-        <li class="chapter " data-level="4.1.1" data-path="redteamcheatsheet.html">
+        <li class="chapter " data-level="4.2" data-path="redteamcheatsheet.html">
             
                 <a href="redteamcheatsheet.html">
             
@@ -377,11 +442,6 @@
                 </a>
             
 
-            
-        </li>
-    
-
-            </ul>
             
         </li>
     
@@ -430,7 +490,201 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="🛠-tools-i-use">🛠 Tools I Use</h1>
+<p>A reference list of tools in my CTF and pentesting workflow, organised by category.</p>
+<hr></hr>
+<h2 id="reconnaissance--scanning">Reconnaissance &amp; Scanning</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Use</th>
+<th>Install</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/RustScan/RustScan" target="_blank">RustScan</a></td>
+<td>Fast port scanner</td>
+<td><code>cargo install rustscan</code></td>
+</tr>
+<tr>
+<td><a href="https://nmap.org" target="_blank">nmap</a></td>
+<td>Service/version/script scanning</td>
+<td><code>apt install nmap</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/OJ/gobuster" target="_blank">gobuster</a></td>
+<td>Directory/subdomain fuzzing</td>
+<td><code>apt install gobuster</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/ffuf/ffuf" target="_blank">ffuf</a></td>
+<td>Web fuzzing</td>
+<td><code>apt install ffuf</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/xmendez/wfuzz" target="_blank">wfuzz</a></td>
+<td>Web fuzzing with complex payloads</td>
+<td><code>pip install wfuzz</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-bash"><span class="hljs-comment"># My standard nmap one-liner</span>
+nmap -p- --min-rate 10000 -sCV -oN nmap_full.txt <span class="hljs-variable">$TARGET</span>
+</code></pre>
+<hr></hr>
+<h2 id="web-exploitation">Web Exploitation</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://portswigger.net/burp" target="_blank">Burp Suite</a></td>
+<td>HTTP proxy, repeater, scanner</td>
+</tr>
+<tr>
+<td><a href="https://sqlmap.org" target="_blank">sqlmap</a></td>
+<td>Automated SQL injection</td>
+</tr>
+<tr>
+<td><a href="https://jwt.io" target="_blank">jwt.io</a></td>
+<td>JWT decode/encode</td>
+</tr>
+<tr>
+<td><a href="https://github.com/sullo/nikto" target="_blank">nikto</a></td>
+<td>Web server scanner</td>
+</tr>
+</tbody>
+</table>
+<hr></hr>
+<h2 id="binary-exploitation-pwn">Binary Exploitation (Pwn)</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Use</th>
+<th>Install</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/Gallopsled/pwntools" target="_blank">pwntools</a></td>
+<td>Exploit scripting</td>
+<td><code>pip install pwntools</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/pwndbg/pwndbg" target="_blank">pwndbg</a></td>
+<td>GDB plugin for pwn</td>
+<td>See GitHub</td>
+</tr>
+<tr>
+<td><a href="https://ghidra-sre.org" target="_blank">Ghidra</a></td>
+<td>Decompiler / reverse engineering</td>
+<td>Download from NSA</td>
+</tr>
+<tr>
+<td><a href="https://github.com/slimm609/checksec" target="_blank">checksec</a></td>
+<td>Check binary mitigations</td>
+<td><code>apt install checksec</code></td>
+</tr>
+<tr>
+<td><a href="https://github.com/JonathanSalwan/ROPgadget" target="_blank">ROPgadget</a></td>
+<td>Find ROP gadgets</td>
+<td><code>pip install ropgadget</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-bash"><span class="hljs-comment"># Quick binary recon</span>
+file binary &amp;&amp; checksec binary &amp;&amp; strings binary | grep -i flag
+</code></pre>
+<hr></hr>
+<h2 id="cryptography">Cryptography</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef</a></td>
+<td>Browser crypto swiss-army knife</td>
+</tr>
+<tr>
+<td><a href="https://hashcat.net" target="_blank">hashcat</a></td>
+<td>GPU password cracking</td>
+</tr>
+<tr>
+<td><a href="https://www.openwall.com/john/" target="_blank">john</a></td>
+<td>CPU password cracking</td>
+</tr>
+<tr>
+<td>Python <code>pycryptodome</code></td>
+<td>Crypto primitives</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-bash"><span class="hljs-comment"># Common hashcat modes</span>
+hashcat -m 0     <span class="hljs-comment"># MD5</span>
+hashcat -m 1000  <span class="hljs-comment"># NTLM</span>
+hashcat -m 1800  <span class="hljs-comment"># sha512crypt</span>
+hashcat -m 16500 <span class="hljs-comment"># JWT HS256</span>
+hashcat -m 124   <span class="hljs-comment"># Django SHA1</span>
+</code></pre>
+<hr></hr>
+<h2 id="post-exploitation--priv-esc">Post-Exploitation &amp; Priv Esc</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/carlospolop/PEASS-ng" target="_blank">linpeas</a></td>
+<td>Linux priv esc enumeration</td>
+</tr>
+<tr>
+<td><a href="https://github.com/The-Z-Labs/linux-exploit-suggester" target="_blank">linux-exploit-suggester</a></td>
+<td>Kernel exploit suggestions</td>
+</tr>
+<tr>
+<td><a href="https://github.com/DominicBreuker/pspy" target="_blank">pspy</a></td>
+<td>Monitor processes without root</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jpillora/chisel" target="_blank">chisel</a></td>
+<td>TCP tunnelling / port forwarding</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-bash"><span class="hljs-comment"># Quick priv esc checks</span>
+<span class="hljs-built_in">sudo</span> -l
+find / -perm -4000 2&gt;/dev/null   <span class="hljs-comment"># SUID binaries</span>
+crontab -l &amp;&amp; <span class="hljs-built_in">cat</span> /etc/crontab
+</code></pre>
+<hr></hr>
+<h2 id="wordlists">Wordlists</h2>
+<ul>
+<li><a href="https://github.com/danielmiessler/SecLists" target="_blank">SecLists</a> — the essential collection</li>
+<li><code>rockyou.txt</code> — <code>/opt/SecLists/Passwords/Leaked-Databases/rockyou.txt</code></li>
+</ul>
+<hr></hr>
+<h2 id="my-setup">My Setup</h2>
+<ul>
+<li><strong>OS</strong>: Kali Linux (main) + Ubuntu (daily)</li>
+<li><strong>Terminal</strong>: tmux</li>
+<li><strong>Editor</strong>: Neovim</li>
+<li><strong>Note-taking</strong>: These HonKit pages + Obsidian locally</li>
+</ul>
+
                                 
                                 </section>
                             
@@ -457,8 +711,12 @@
 
             
                 
+                <a href="../writeups/ctf/" class="navigation navigation-prev " aria-label="Previous page: Challenge Solves">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="redteamcheatsheet.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Red Team Cheat Sheet">
+                
+                <a href="redteamcheatsheet.html" class="navigation navigation-next " aria-label="Next page: Red Team Cheat Sheet">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -469,7 +727,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tools I Use","level":"4.1","depth":1,"next":{"title":"Red Team Cheat Sheet","level":"4.1.1","depth":2,"path":"resources/redteamcheatsheet.md","ref":"resources/redteamcheatsheet.md","articles":[]},"previous":{"title":"Challenge Solves","level":"3.4.1","depth":2,"ref":"","articles":[]},"articles":[{"title":"Red Team Cheat Sheet","level":"4.1.1","depth":2,"path":"resources/redteamcheatsheet.md","ref":"resources/redteamcheatsheet.md","articles":[]}],"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resources/tools.md","mtime":"2026-03-08T15:15:27.017Z","type":"markdown"},"gitbook":{"version":"6.1.6","time":"2026-03-08T15:21:48.193Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Tools I Use","level":"4.1","depth":1,"next":{"title":"Red Team Cheat Sheet","level":"4.2","depth":1,"path":"resources/redteamcheatsheet.md","ref":"resources/redteamcheatsheet.md","articles":[]},"previous":{"title":"Challenge Solves","level":"3.4.1","depth":2,"path":"writeups/ctf/README.md","ref":"writeups/ctf/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"resources/tools.md","mtime":"2026-03-08T15:42:40.781Z","type":"markdown"},"gitbook":{"version":"6.1.6","time":"2026-03-08T15:43:11.560Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
