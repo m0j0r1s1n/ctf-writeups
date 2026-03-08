@@ -91,12 +91,13 @@ crontab -l && cat /etc/crontab
 
 - [SecLists](https://github.com/danielmiessler/SecLists) — the essential collection
 - `rockyou.txt` — `/opt/SecLists/Passwords/Leaked-Databases/rockyou.txt`
+I have a few I have created myself for certain targets.
 
 ---
 
 ## My Setup
 
-- **OS**: Kali Linux (main) + Ubuntu (daily)
-- **Terminal**: tmux
-- **Editor**: Neovim
-- **Note-taking**: These HonKit pages + Obsidian locally
+- **OS**: Kali Linux (VM daily) + Ubuntu  WSL (Laptop daily) + Debian ( VM daily) + Windows (Gaming Desktop daily)
+- **Terminal**: terminator
+- **Editor**: nano
+- **Note-taking**: These HonKit pages + VSCode with WSL Ubuntu autodeploying with a `git push` Oh and usually also Obsidian locally
