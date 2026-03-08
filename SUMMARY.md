@@ -19,13 +19,17 @@
     * [Hackaboo – Spooky Phishing](writeups/forensics/spookyfishing.md)
     * [XOR Madness – CryptoCTF](writeups/crypto/xor-madness.md)
   * 🕵🏻 Sherlocks
-    * [JWT Abuse – WebCTF](writeups/web/jwt-abuse.md)
+
 * THM
   * 🖳 Machines
     * [Overview](writeups/thm/README.md)
 * CTF's
   * [Challenge Solves](writeups/ctf/README.md)
 
+## 🔬 Research
+* [JWT Abuse](writeups/research/jwt-abuse.md)
+
 ## 🛠 Resources
 * [Tools I Use](resources/tools.md)
 * [Red Team Cheat Sheet](resources/redteamcheatsheet.md)
+
